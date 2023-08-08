@@ -1,0 +1,889 @@
+{
+    "analyzer": "Flawfinder",
+    "mapping": {
+        "strcpy": {
+            "cwe": "CWE-120",
+            "description": "Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120)."
+        },
+        "strcpyA": {
+            "cwe": "CWE-120",
+            "description": "Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120)."
+        },
+        "strcpyW": {
+            "cwe": "CWE-120",
+            "description": "Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120)."
+        },
+        "StrCpy": {
+            "cwe": "CWE-120",
+            "description": "Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120)."
+        },
+        "StrCpyA": {
+            "cwe": "CWE-120",
+            "description": "Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120)."
+        },
+        "lstrcpyA": {
+            "cwe": "CWE-120",
+            "description": "Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120)."
+        },
+        "lstrcpyW": {
+            "cwe": "CWE-120",
+            "description": "Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120)."
+        },
+        "_tccpy": {
+            "cwe": "CWE-120",
+            "description": "Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120)."
+        },
+        "_mbccpy": {
+            "cwe": "CWE-120",
+            "description": "Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120)."
+        },
+        "_ftcscpy": {
+            "cwe": "CWE-120",
+            "description": "Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120)."
+        },
+        "_mbsncpy": {
+            "cwe": "CWE-120",
+            "description": "Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120)."
+        },
+        "StrCpyN": {
+            "cwe": "CWE-120",
+            "description": "Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120)."
+        },
+        "StrCpyNA": {
+            "cwe": "CWE-120",
+            "description": "Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120)."
+        },
+        "StrCpyNW": {
+            "cwe": "CWE-120",
+            "description": "Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120)."
+        },
+        "StrNCpy": {
+            "cwe": "CWE-120",
+            "description": "Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120)."
+        },
+        "strcpynA": {
+            "cwe": "CWE-120",
+            "description": "Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120)."
+        },
+        "StrNCpyA": {
+            "cwe": "CWE-120",
+            "description": "Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120)."
+        },
+        "StrNCpyW": {
+            "cwe": "CWE-120",
+            "description": "Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120)."
+        },
+        "lstrcpynA": {
+            "cwe": "CWE-120",
+            "description": "Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120)."
+        },
+        "lstrcpynW": {
+            "cwe": "CWE-120",
+            "description": "Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120)."
+        },
+        "lstrcpy": {
+            "cwe": "CWE-120",
+            "description": "Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120)."
+        },
+        "wcscpy": {
+            "cwe": "CWE-120",
+            "description": "Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120)."
+        },
+        "_tcscpy": {
+            "cwe": "CWE-120",
+            "description": "Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120)."
+        },
+        "_mbscpy": {
+            "cwe": "CWE-120",
+            "description": "Does not check for buffer overflows when copying to destination [MS-banned] (CWE-120)."
+        },
+        "memcpy": {
+            "cwe": "CWE-120",
+            "description": "Does not check for buffer overflows when copying to destination (CWE-120)."
+        },
+        "CopyMemory": {
+            "cwe": "CWE-120",
+            "description": "Does not check for buffer overflows when copying to destination (CWE-120)."
+        },
+        "bcopy": {
+            "cwe": "CWE-120",
+            "description": "Does not check for buffer overflows when copying to destination (CWE-120)."
+        },
+        "strcat": {
+            "cwe": "CWE-120",
+            "description": "Does not check for buffer overflows when concatenating to destination [MS-banned] (CWE-120)."
+        },
+        "lstrcat": {
+            "cwe": "CWE-120",
+            "description": "Does not check for buffer overflows when concatenating to destination [MS-banned] (CWE-120)."
+        },
+        "wcscat": {
+            "cwe": "CWE-120",
+            "description": "Does not check for buffer overflows when concatenating to destination [MS-banned] (CWE-120)."
+        },
+        "_tcscat": {
+            "cwe": "CWE-120",
+            "description": "Does not check for buffer overflows when concatenating to destination [MS-banned] (CWE-120)."
+        },
+        "_mbscat": {
+            "cwe": "CWE-120",
+            "description": "Does not check for buffer overflows when concatenating to destination [MS-banned] (CWE-120)."
+        },
+        "StrCat": {
+            "cwe": "CWE-120",
+            "description": "Does not check for buffer overflows when concatenating to destination [MS-banned] (CWE-120)."
+        },
+        "StrCatA": {
+            "cwe": "CWE-120",
+            "description": "Does not check for buffer overflows when concatenating to destination [MS-banned] (CWE-120)."
+        },
+        "StrcatW": {
+            "cwe": "CWE-120",
+            "description": "Does not check for buffer overflows when concatenating to destination [MS-banned] (CWE-120)."
+        },
+        "lstrcatA": {
+            "cwe": "CWE-120",
+            "description": "Does not check for buffer overflows when concatenating to destination [MS-banned] (CWE-120)."
+        },
+        "lstrcatW": {
+            "cwe": "CWE-120",
+            "description": "Does not check for buffer overflows when concatenating to destination [MS-banned] (CWE-120)."
+        },
+        "strCatBuff": {
+            "cwe": "CWE-120",
+            "description": "Does not check for buffer overflows when concatenating to destination [MS-banned] (CWE-120)."
+        },
+        "StrCatBuffA": {
+            "cwe": "CWE-120",
+            "description": "Does not check for buffer overflows when concatenating to destination [MS-banned] (CWE-120)."
+        },
+        "StrCatBuffW": {
+            "cwe": "CWE-120",
+            "description": "Does not check for buffer overflows when concatenating to destination [MS-banned] (CWE-120)."
+        },
+        "StrCatChainW": {
+            "cwe": "CWE-120",
+            "description": "Does not check for buffer overflows when concatenating to destination [MS-banned] (CWE-120)."
+        },
+        "_tccat": {
+            "cwe": "CWE-120",
+            "description": "Does not check for buffer overflows when concatenating to destination [MS-banned] (CWE-120)."
+        },
+        "_mbccat": {
+            "cwe": "CWE-120",
+            "description": "Does not check for buffer overflows when concatenating to destination [MS-banned] (CWE-120)."
+        },
+        "_ftcscat": {
+            "cwe": "CWE-120",
+            "description": "Does not check for buffer overflows when concatenating to destination [MS-banned] (CWE-120)."
+        },
+        "StrCatN": {
+            "cwe": "CWE-120",
+            "description": "Does not check for buffer overflows when concatenating to destination [MS-banned] (CWE-120)."
+        },
+        "StrCatNA": {
+            "cwe": "CWE-120",
+            "description": "Does not check for buffer overflows when concatenating to destination [MS-banned] (CWE-120)."
+        },
+        "StrCatNW": {
+            "cwe": "CWE-120",
+            "description": "Does not check for buffer overflows when concatenating to destination [MS-banned] (CWE-120)."
+        },
+        "StrNCat": {
+            "cwe": "CWE-120",
+            "description": "Does not check for buffer overflows when concatenating to destination [MS-banned] (CWE-120)."
+        },
+        "StrNCatA": {
+            "cwe": "CWE-120",
+            "description": "Does not check for buffer overflows when concatenating to destination [MS-banned] (CWE-120)."
+        },
+        "StrNCatW": {
+            "cwe": "CWE-120",
+            "description": "Does not check for buffer overflows when concatenating to destination [MS-banned] (CWE-120)."
+        },
+        "lstrncat": {
+            "cwe": "CWE-120",
+            "description": "Does not check for buffer overflows when concatenating to destination [MS-banned] (CWE-120)."
+        },
+        "lstrcatnA": {
+            "cwe": "CWE-120",
+            "description": "Does not check for buffer overflows when concatenating to destination [MS-banned] (CWE-120)."
+        },
+        "lstrcatnW": {
+            "cwe": "CWE-120",
+            "description": "Does not check for buffer overflows when concatenating to destination [MS-banned] (CWE-120)."
+        },
+        "strncpy": {
+            "cwe": "CWE-120",
+            "description": "Easily used incorrectly; doesn't always \\0-terminate or check for invalid pointers [MS-banned] (CWE-120)."
+        },
+        "lstrcpyn": {
+            "cwe": "CWE-120",
+            "description": "Easily used incorrectly; doesn't always \\0-terminate or check for invalid pointers [MS-banned] (CWE-120)."
+        },
+        "wcsncpy": {
+            "cwe": "CWE-120",
+            "description": "Easily used incorrectly; doesn't always \\0-terminate or check for invalid pointers [MS-banned] (CWE-120)."
+        },
+        "_tcsncpy": {
+            "cwe": "CWE-120",
+            "description": "Easily used incorrectly; doesn't always \\0-terminate or check for invalid pointers [MS-banned] (CWE-120)."
+        },
+        "_mbsnbcpy": {
+            "cwe": "CWE-120",
+            "description": "Easily used incorrectly; doesn't always \\0-terminate or check for invalid pointers [MS-banned] (CWE-120)."
+        },
+        "strncat": {
+            "cwe": "CWE-120",
+            "description": "Easily used incorrectly (e.g., incorrectly computing the correct maximum size to add) [MS-banned] (CWE-120)."
+        },
+        "lstrcatn": {
+            "cwe": "CWE-120",
+            "description": "Easily used incorrectly (e.g., incorrectly computing the correct maximum size to add) [MS-banned] (CWE-120)."
+        },
+        "wcsncat": {
+            "cwe": "CWE-120",
+            "description": "Easily used incorrectly (e.g., incorrectly computing the correct maximum size to add) [MS-banned] (CWE-120)."
+        },
+        "_tcsncat": {
+            "cwe": "CWE-120",
+            "description": "Easily used incorrectly (e.g., incorrectly computing the correct maximum size to add) [MS-banned] (CWE-120)."
+        },
+        "_mbsnbcat": {
+            "cwe": "CWE-120",
+            "description": "Easily used incorrectly (e.g., incorrectly computing the correct maximum size to add) [MS-banned] (CWE-120)."
+        },
+        "strccpy": {
+            "cwe": "CWE-120",
+            "description": "Subject to buffer overflow if buffer is not as big as claimed (CWE-120)."
+        },
+        "strcadd": {
+            "cwe": "CWE-120",
+            "description": "Subject to buffer overflow if buffer is not as big as claimed (CWE-120)."
+        },
+        "char": {
+            "cwe": "CWE-119",
+            "description": "Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120)."
+        },
+        "TCHAR": {
+            "cwe": "CWE-119",
+            "description": "Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120)."
+        },
+        "wchar_t": {
+            "cwe": "CWE-119",
+            "description": "Statically-sized arrays can be improperly restricted, leading to potential overflows or other issues (CWE-119!/CWE-120)."
+        },
+        "gets": {
+            "cwe": "CWE-120",
+            "description": "Does not check for buffer overflows (CWE-120, CWE-20)."
+        },
+        "_getts": {
+            "cwe": "CWE-120",
+            "description": "Does not check for buffer overflows (CWE-120, CWE-20)."
+        },
+        "sprintf": {
+            "cwe": "CWE-120",
+            "description": "Does not check for buffer overflows (CWE-120)."
+        },
+        "vsprintf": {
+            "cwe": "CWE-120",
+            "description": "Does not check for buffer overflows (CWE-120)."
+        },
+        "swprintf": {
+            "cwe": "CWE-120",
+            "description": "Does not check for buffer overflows (CWE-120)."
+        },
+        "vswprintf": {
+            "cwe": "CWE-120",
+            "description": "Does not check for buffer overflows (CWE-120)."
+        },
+        "_stprintf": {
+            "cwe": "CWE-120",
+            "description": "Does not check for buffer overflows (CWE-120)."
+        },
+        "_vstprintf": {
+            "cwe": "CWE-120",
+            "description": "Does not check for buffer overflows (CWE-120)."
+        },
+        "printf": {
+            "cwe": "CWE-134",
+            "description": "If format strings can be influenced by an attacker, they can be exploited (CWE-134)."
+        },
+        "vprintf": {
+            "cwe": "CWE-134",
+            "description": "If format strings can be influenced by an attacker, they can be exploited (CWE-134)."
+        },
+        "vwprintf": {
+            "cwe": "CWE-134",
+            "description": "If format strings can be influenced by an attacker, they can be exploited (CWE-134)."
+        },
+        "vfwprintf": {
+            "cwe": "CWE-134",
+            "description": "If format strings can be influenced by an attacker, they can be exploited (CWE-134)."
+        },
+        "_vtprintf": {
+            "cwe": "CWE-134",
+            "description": "If format strings can be influenced by an attacker, they can be exploited (CWE-134)."
+        },
+        "wprintf": {
+            "cwe": "CWE-134",
+            "description": "If format strings can be influenced by an attacker, they can be exploited (CWE-134)."
+        },
+        "fprintf": {
+            "cwe": "CWE-134",
+            "description": "If format strings can be influenced by an attacker, they can be exploited (CWE-134)."
+        },
+        "vfprintf": {
+            "cwe": "CWE-134",
+            "description": "If format strings can be influenced by an attacker, they can be exploited (CWE-134)."
+        },
+        "_ftprintf": {
+            "cwe": "CWE-134",
+            "description": "If format strings can be influenced by an attacker, they can be exploited (CWE-134)."
+        },
+        "_vftprintf": {
+            "cwe": "CWE-134",
+            "description": "If format strings can be influenced by an attacker, they can be exploited (CWE-134)."
+        },
+        "fwprintf": {
+            "cwe": "CWE-134",
+            "description": "If format strings can be influenced by an attacker, they can be exploited (CWE-134)."
+        },
+        "fvwprintf": {
+            "cwe": "CWE-134",
+            "description": "If format strings can be influenced by an attacker, they can be exploited (CWE-134)."
+        },
+        "syslog": {
+            "cwe": "CWE-134",
+            "description": "If syslog's format strings can be influenced by an attacker, they can be exploited (CWE-134)."
+        },
+        "snprintf": {
+            "cwe": "CWE-134",
+            "description": "If format strings can be influenced by an attacker, they can be exploited, and note that sprintf variations do not always \\0-terminate (CWE-134)."
+        },
+        "vsnprintf": {
+            "cwe": "CWE-134",
+            "description": "If format strings can be influenced by an attacker, they can be exploited, and note that sprintf variations do not always \\0-terminate (CWE-134)."
+        },
+        "_snprintf": {
+            "cwe": "CWE-134",
+            "description": "If format strings can be influenced by an attacker, they can be exploited, and note that sprintf variations do not always \\0-terminate (CWE-134)."
+        },
+        "_sntprintf": {
+            "cwe": "CWE-134",
+            "description": "If format strings can be influenced by an attacker, they can be exploited, and note that sprintf variations do not always \\0-terminate (CWE-134)."
+        },
+        "_vsntprintf": {
+            "cwe": "CWE-134",
+            "description": "If format strings can be influenced by an attacker, they can be exploited, and note that sprintf variations do not always \\0-terminate (CWE-134)."
+        },
+        "scanf": {
+            "cwe": "CWE-120",
+            "description": "The scanf() family's %s operation, without a limit specification, permits buffer overflows (CWE-120, CWE-20)."
+        },
+        "vscanf": {
+            "cwe": "CWE-120",
+            "description": "The scanf() family's %s operation, without a limit specification, permits buffer overflows (CWE-120, CWE-20)."
+        },
+        "wscanf": {
+            "cwe": "CWE-120",
+            "description": "The scanf() family's %s operation, without a limit specification, permits buffer overflows (CWE-120, CWE-20)."
+        },
+        "_tscanf": {
+            "cwe": "CWE-120",
+            "description": "The scanf() family's %s operation, without a limit specification, permits buffer overflows (CWE-120, CWE-20)."
+        },
+        "vwscanf": {
+            "cwe": "CWE-120",
+            "description": "The scanf() family's %s operation, without a limit specification, permits buffer overflows (CWE-120, CWE-20)."
+        },
+        "fscanf": {
+            "cwe": "CWE-120",
+            "description": "The scanf() family's %s operation, without a limit specification, permits buffer overflows (CWE-120, CWE-20)."
+        },
+        "sscanf": {
+            "cwe": "CWE-120",
+            "description": "The scanf() family's %s operation, without a limit specification, permits buffer overflows (CWE-120, CWE-20)."
+        },
+        "vsscanf": {
+            "cwe": "CWE-120",
+            "description": "The scanf() family's %s operation, without a limit specification, permits buffer overflows (CWE-120, CWE-20)."
+        },
+        "vfscanf": {
+            "cwe": "CWE-120",
+            "description": "The scanf() family's %s operation, without a limit specification, permits buffer overflows (CWE-120, CWE-20)."
+        },
+        "_ftscanf": {
+            "cwe": "CWE-120",
+            "description": "The scanf() family's %s operation, without a limit specification, permits buffer overflows (CWE-120, CWE-20)."
+        },
+        "fwscanf": {
+            "cwe": "CWE-120",
+            "description": "The scanf() family's %s operation, without a limit specification, permits buffer overflows (CWE-120, CWE-20)."
+        },
+        "vfwscanf": {
+            "cwe": "CWE-120",
+            "description": "The scanf() family's %s operation, without a limit specification, permits buffer overflows (CWE-120, CWE-20)."
+        },
+        "vswscanf": {
+            "cwe": "CWE-120",
+            "description": "The scanf() family's %s operation, without a limit specification, permits buffer overflows (CWE-120, CWE-20)."
+        },
+        "strlen": {
+            "cwe": "CWE-126",
+            "description": "Does not handle strings that are not \\0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126)."
+        },
+        "wcslen": {
+            "cwe": "CWE-126",
+            "description": "Does not handle strings that are not \\0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126)."
+        },
+        "_tcslen": {
+            "cwe": "CWE-126",
+            "description": "Does not handle strings that are not \\0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126)."
+        },
+        "_mbslen": {
+            "cwe": "CWE-126",
+            "description": "Does not handle strings that are not \\0-terminated; if given one it may perform an over-read (it could cause a crash if unprotected) (CWE-126)."
+        },
+        "MultiByteToWideChar": {
+            "cwe": "CWE-120",
+            "description": "Requires maximum length in CHARACTERS, not bytes (CWE-120)."
+        },
+        "streadd": {
+            "cwe": "CWE-120",
+            "description": "This function does not protect against buffer overflows (CWE-120)."
+        },
+        "strecpy": {
+            "cwe": "CWE-120",
+            "description": "This function does not protect against buffer overflows (CWE-120)."
+        },
+        "strtrns": {
+            "cwe": "CWE-120",
+            "description": "This function does not protect against buffer overflows (CWE-120)."
+        },
+        "realpath": {
+            "cwe": "CWE-785",
+            "description": "This function does not protect against buffer overflows, and some implementations can overflow internally (CWE-120/CWE-785!)."
+        },
+        "getopt": {
+            "cwe": "CWE-120",
+            "description": "Some older implementations do not protect against internal buffer overflows (CWE-120, CWE-20)."
+        },
+        "getopt_long": {
+            "cwe": "CWE-120",
+            "description": "Some older implementations do not protect against internal buffer overflows (CWE-120, CWE-20)."
+        },
+        "getwd": {
+            "cwe": "CWE-120",
+            "description": "This does not protect against buffer overflows by itself, so use with caution (CWE-120, CWE-20)."
+        },
+        "getchar": {
+            "cwe": "CWE-120",
+            "description": "Check buffer boundaries if used in a loop including recursive loops (CWE-120, CWE-20)."
+        },
+        "fgetc": {
+            "cwe": "CWE-120",
+            "description": "Check buffer boundaries if used in a loop including recursive loops (CWE-120, CWE-20)."
+        },
+        "getc": {
+            "cwe": "CWE-120",
+            "description": "Check buffer boundaries if used in a loop including recursive loops (CWE-120, CWE-20)."
+        },
+        "read": {
+            "cwe": "CWE-120",
+            "description": "Check buffer boundaries if used in a loop including recursive loops (CWE-120, CWE-20)."
+        },
+        "_gettc": {
+            "cwe": "CWE-120",
+            "description": "Check buffer boundaries if used in a loop including recursive loops (CWE-120, CWE-20)."
+        },
+        "access": {
+            "cwe": "CWE-362",
+            "description": "This usually indicates a security flaw.  If an attacker can change anything along the path between the call to access() and the file's actual use (e.g., by moving files), the attacker can exploit the race condition (CWE-362/CWE-367!)."
+        },
+        "chown": {
+            "cwe": "CWE-362",
+            "description": "This accepts filename arguments; if an attacker can move those files, a race condition results. (CWE-362)."
+        },
+        "chgrp": {
+            "cwe": "CWE-362",
+            "description": "This accepts filename arguments; if an attacker can move those files, a race condition results. (CWE-362)."
+        },
+        "chmod": {
+            "cwe": "CWE-362",
+            "description": "This accepts filename arguments; if an attacker can move those files, a race condition results. (CWE-362)."
+        },
+        "vfork": {
+            "cwe": "CWE-362",
+            "description": "On some old systems, vfork() permits race conditions, and it's very difficult to use correctly (CWE-362)."
+        },
+        "readlink": {
+            "cwe": "CWE-362",
+            "description": "This accepts filename arguments; if an attacker can move those files or change the link content, a race condition results.  Also, it does not terminate with ASCII NUL. (CWE-362, CWE-20)."
+        },
+        "tmpfile": {
+            "cwe": "CWE-377",
+            "description": "Function tmpfile() has a security flaw on some systems (e.g., older System V systems) (CWE-377)."
+        },
+        "tmpnam": {
+            "cwe": "CWE-377",
+            "description": "Temporary file race condition (CWE-377)."
+        },
+        "tempnam": {
+            "cwe": "CWE-377",
+            "description": "Temporary file race condition (CWE-377)."
+        },
+        "mktemp": {
+            "cwe": "CWE-377",
+            "description": "Temporary file race condition (CWE-377)."
+        },
+        "mkstemp": {
+            "cwe": "CWE-377",
+            "description": "Potential for temporary file vulnerability in some circumstances.  Some older Unix-like systems create temp files with permission to write by all by default, so be sure to set the umask to override this. Also, some older Unix systems might fail to use O_EXCL when opening the file, so make sure that O_EXCL is used by the library (CWE-377)."
+        },
+        "fopen": {
+            "cwe": "CWE-362",
+            "description": "Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362)."
+        },
+        "open": {
+            "cwe": "CWE-362",
+            "description": "Check when opening files - can an attacker redirect it (via symlinks), force the opening of special file type (e.g., device files), move things around to create a race condition, control its ancestors, or change its contents? (CWE-362)."
+        },
+        "umask": {
+            "cwe": "CWE-732",
+            "description": "Ensure that umask is given most restrictive possible setting (e.g., 066 or 077) (CWE-732)."
+        },
+        "GetTempFileName": {
+            "cwe": "CWE-377",
+            "description": "Temporary file race condition in certain cases (e.g., if run as SYSTEM in many versions of Windows) (CWE-377)."
+        },
+        "execl": {
+            "cwe": "CWE-78",
+            "description": "This causes a new program to execute and is difficult to use safely (CWE-78)."
+        },
+        "execlp": {
+            "cwe": "CWE-78",
+            "description": "This causes a new program to execute and is difficult to use safely (CWE-78)."
+        },
+        "execle": {
+            "cwe": "CWE-78",
+            "description": "This causes a new program to execute and is difficult to use safely (CWE-78)."
+        },
+        "execv": {
+            "cwe": "CWE-78",
+            "description": "This causes a new program to execute and is difficult to use safely (CWE-78)."
+        },
+        "execvp": {
+            "cwe": "CWE-78",
+            "description": "This causes a new program to execute and is difficult to use safely (CWE-78)."
+        },
+        "system": {
+            "cwe": "CWE-78",
+            "description": "This causes a new program to execute and is difficult to use safely (CWE-78)."
+        },
+        "popen": {
+            "cwe": "CWE-78",
+            "description": "This causes a new program to execute and is difficult to use safely (CWE-78)."
+        },
+        "WinExec": {
+            "cwe": "CWE-78",
+            "description": "This causes a new program to execute and is difficult to use safely (CWE-78)."
+        },
+        "ShellExecute": {
+            "cwe": "CWE-78",
+            "description": "This causes a new program to execute and is difficult to use safely (CWE-78)."
+        },
+        "CreateProcessAsUser": {
+            "cwe": "CWE-78",
+            "description": "This causes a new process to execute and is difficult to use safely (CWE-78)."
+        },
+        "CreateProcessWithLogon": {
+            "cwe": "CWE-78",
+            "description": "This causes a new process to execute and is difficult to use safely (CWE-78)."
+        },
+        "CreateProcess": {
+            "cwe": "CWE-78",
+            "description": "This causes a new process to execute and is difficult to use safely (CWE-78)."
+        },
+        "atoi": {
+            "cwe": "CWE-190",
+            "description": "Unless checked, the resulting number can exceed the expected range (CWE-190)."
+        },
+        "atol": {
+            "cwe": "CWE-190",
+            "description": "Unless checked, the resulting number can exceed the expected range (CWE-190)."
+        },
+        "_wtoi": {
+            "cwe": "CWE-190",
+            "description": "Unless checked, the resulting number can exceed the expected range (CWE-190)."
+        },
+        "_wtoi64": {
+            "cwe": "CWE-190",
+            "description": "Unless checked, the resulting number can exceed the expected range (CWE-190)."
+        },
+        "drand48": {
+            "cwe": "CWE-327",
+            "description": "This function is not sufficiently random for security-related functions such as key and nonce creation (CWE-327)."
+        },
+        "erand48": {
+            "cwe": "CWE-327",
+            "description": "This function is not sufficiently random for security-related functions such as key and nonce creation (CWE-327)."
+        },
+        "jrand48": {
+            "cwe": "CWE-327",
+            "description": "This function is not sufficiently random for security-related functions such as key and nonce creation (CWE-327)."
+        },
+        "lcong48": {
+            "cwe": "CWE-327",
+            "description": "This function is not sufficiently random for security-related functions such as key and nonce creation (CWE-327)."
+        },
+        "lrand48": {
+            "cwe": "CWE-327",
+            "description": "This function is not sufficiently random for security-related functions such as key and nonce creation (CWE-327)."
+        },
+        "mrand48": {
+            "cwe": "CWE-327",
+            "description": "This function is not sufficiently random for security-related functions such as key and nonce creation (CWE-327)."
+        },
+        "nrand48": {
+            "cwe": "CWE-327",
+            "description": "This function is not sufficiently random for security-related functions such as key and nonce creation (CWE-327)."
+        },
+        "random": {
+            "cwe": "CWE-327",
+            "description": "This function is not sufficiently random for security-related functions such as key and nonce creation (CWE-327)."
+        },
+        "seed48": {
+            "cwe": "CWE-327",
+            "description": "This function is not sufficiently random for security-related functions such as key and nonce creation (CWE-327)."
+        },
+        "setstate": {
+            "cwe": "CWE-327",
+            "description": "This function is not sufficiently random for security-related functions such as key and nonce creation (CWE-327)."
+        },
+        "srand": {
+            "cwe": "CWE-327",
+            "description": "This function is not sufficiently random for security-related functions such as key and nonce creation (CWE-327)."
+        },
+        "strfry": {
+            "cwe": "CWE-327",
+            "description": "This function is not sufficiently random for security-related functions such as key and nonce creation (CWE-327)."
+        },
+        "srandom": {
+            "cwe": "CWE-327",
+            "description": "This function is not sufficiently random for security-related functions such as key and nonce creation (CWE-327)."
+        },
+        "g_rand_boolean": {
+            "cwe": "CWE-327",
+            "description": "This function is not sufficiently random for security-related functions such as key and nonce creation (CWE-327)."
+        },
+        "g_rand_int": {
+            "cwe": "CWE-327",
+            "description": "This function is not sufficiently random for security-related functions such as key and nonce creation (CWE-327)."
+        },
+        "g_rand_int_range": {
+            "cwe": "CWE-327",
+            "description": "This function is not sufficiently random for security-related functions such as key and nonce creation (CWE-327)."
+        },
+        "g_rand_double": {
+            "cwe": "CWE-327",
+            "description": "This function is not sufficiently random for security-related functions such as key and nonce creation (CWE-327)."
+        },
+        "g_rand_double_range": {
+            "cwe": "CWE-327",
+            "description": "This function is not sufficiently random for security-related functions such as key and nonce creation (CWE-327)."
+        },
+        "g_random_boolean": {
+            "cwe": "CWE-327",
+            "description": "This function is not sufficiently random for security-related functions such as key and nonce creation (CWE-327)."
+        },
+        "g_random_int": {
+            "cwe": "CWE-327",
+            "description": "This function is not sufficiently random for security-related functions such as key and nonce creation (CWE-327)."
+        },
+        "g_random_int_range": {
+            "cwe": "CWE-327",
+            "description": "This function is not sufficiently random for security-related functions such as key and nonce creation (CWE-327)."
+        },
+        "g_random_double": {
+            "cwe": "CWE-327",
+            "description": "This function is not sufficiently random for security-related functions such as key and nonce creation (CWE-327)."
+        },
+        "g_random_double_range": {
+            "cwe": "CWE-327",
+            "description": "This function is not sufficiently random for security-related functions such as key and nonce creation (CWE-327)."
+        },
+        "crypt": {
+            "cwe": "CWE-327",
+            "description": "The crypt functions use a poor one-way hashing algorithm; since they only accept passwords of 8 characters or fewer and only a two-byte salt, they are excessively vulnerable to dictionary attacks given today's faster computing equipment (CWE-327)."
+        },
+        "crypt_r": {
+            "cwe": "CWE-327",
+            "description": "The crypt functions use a poor one-way hashing algorithm; since they only accept passwords of 8 characters or fewer and only a two-byte salt, they are excessively vulnerable to dictionary attacks given today's faster computing equipment (CWE-327)."
+        },
+        "EVP_des_ecb": {
+            "cwe": "CWE-327",
+            "description": "DES only supports a 56-bit keysize, which is too small given today's computers (CWE-327)."
+        },
+        "EVP_des_cbc": {
+            "cwe": "CWE-327",
+            "description": "DES only supports a 56-bit keysize, which is too small given today's computers (CWE-327)."
+        },
+        "EVP_des_cfb": {
+            "cwe": "CWE-327",
+            "description": "DES only supports a 56-bit keysize, which is too small given today's computers (CWE-327)."
+        },
+        "EVP_des_ofb": {
+            "cwe": "CWE-327",
+            "description": "DES only supports a 56-bit keysize, which is too small given today's computers (CWE-327)."
+        },
+        "EVP_desx_cbc": {
+            "cwe": "CWE-327",
+            "description": "DES only supports a 56-bit keysize, which is too small given today's computers (CWE-327)."
+        },
+        "EVP_rc4_40": {
+            "cwe": "CWE-327",
+            "description": "These keysizes are too small given today's computers (CWE-327)."
+        },
+        "EVP_rc2_40_cbc": {
+            "cwe": "CWE-327",
+            "description": "These keysizes are too small given today's computers (CWE-327)."
+        },
+        "EVP_rc2_64_cbc": {
+            "cwe": "CWE-327",
+            "description": "These keysizes are too small given today's computers (CWE-327)."
+        },
+        "chroot": {
+            "cwe": "CWE-250",
+            "description": "chroot can be very helpful, but is hard to use correctly (CWE-250, CWE-22)."
+        },
+        "getenv": {
+            "cwe": "CWE-807",
+            "description": "Environment variables are untrustable input if they can be set by an attacker.  They can have any content and length, and the same variable can be set more than once (CWE-807, CWE-20)."
+        },
+        "curl_getenv": {
+            "cwe": "CWE-807",
+            "description": "Environment variables are untrustable input if they can be set by an attacker.  They can have any content and length, and the same variable can be set more than once (CWE-807, CWE-20)."
+        },
+        "g_get_home_dir": {
+            "cwe": "CWE-807",
+            "description": "This function is synonymous with 'getenv(\"HOME\")';it returns untrustable input if the environment can beset by an attacker.  It can have any content and length, and the same variable can be set more than once (CWE-807, CWE-20)."
+        },
+        "g_get_tmp_dir": {
+            "cwe": "CWE-807",
+            "description": "This function is synonymous with 'getenv(\"TMP\")';it returns untrustable input if the environment can beset by an attacker.  It can have any content and length, and the same variable can be set more than once (CWE-807, CWE-20)."
+        },
+        "RpcImpersonateClient": {
+            "cwe": "CWE-250",
+            "description": "If this call fails, the program could fail to drop heightened privileges (CWE-250)."
+        },
+        "ImpersonateLoggedOnUser": {
+            "cwe": "CWE-250",
+            "description": "If this call fails, the program could fail to drop heightened privileges (CWE-250)."
+        },
+        "CoImpersonateClient": {
+            "cwe": "CWE-250",
+            "description": "If this call fails, the program could fail to drop heightened privileges (CWE-250)."
+        },
+        "ImpersonateNamedPipeClient": {
+            "cwe": "CWE-250",
+            "description": "If this call fails, the program could fail to drop heightened privileges (CWE-250)."
+        },
+        "ImpersonateDdeClientWindow": {
+            "cwe": "CWE-250",
+            "description": "If this call fails, the program could fail to drop heightened privileges (CWE-250)."
+        },
+        "ImpersonateSecurityContext": {
+            "cwe": "CWE-250",
+            "description": "If this call fails, the program could fail to drop heightened privileges (CWE-250)."
+        },
+        "SetThreadToken": {
+            "cwe": "CWE-250",
+            "description": "If this call fails, the program could fail to drop heightened privileges (CWE-250)."
+        },
+        "LoadLibrary": {
+            "cwe": "CWE-829",
+            "description": "Ensure that the full path to the library is specified, or current directory may be used (CWE-829, CWE-20)."
+        },
+        "LoadLibraryEx": {
+            "cwe": "CWE-829",
+            "description": "Ensure that the full path to the library is specified, or current directory may be used (CWE-829, CWE-20)."
+        },
+        "SetSecurityDescriptorDacl": {
+            "cwe": "CWE-732",
+            "description": "Never create NULL ACLs; an attacker can set it to Everyone (Deny All Access), which would even forbid administrator access (CWE-732)."
+        },
+        "AddAccessAllowedAce": {
+            "cwe": "CWE-732",
+            "description": "This doesn't set the inheritance bits in the access control entry (ACE) header (CWE-732)."
+        },
+        "getlogin": {
+            "cwe": "CWE-807",
+            "description": "It's often easy to fool getlogin.  Sometimes it does not work at all, because some program messed up the utmp file.  Often, it gives only the first 8 characters of the login name. The user currently logged in on the controlling tty of our program need not be the user who started it.  Avoid getlogin() for security-related purposes (CWE-807)."
+        },
+        "cuserid": {
+            "cwe": "CWE-120",
+            "description": "Exactly what cuserid() does is poorly defined (e.g., some systems use the effective uid, like Linux, while others like System V use the real uid). Thus, you can't trust what it does. It's certainly not portable (The cuserid function was included in the 1988 version of POSIX, but removed from the 1990 version).  Also, if passed a non-null parameter, there's a risk of a buffer overflow if the passed-in buffer is not at least L_cuserid characters long (CWE-120)."
+        },
+        "getpw": {
+            "cwe": "CWE-676",
+            "description": "This function is dangerous; it may overflow the provided buffer. It extracts data from a 'protected' area, but most systems have many commands to let users modify the protected area, and it's not always clear what their limits are.  Best to avoid using this function altogether (CWE-676, CWE-120)."
+        },
+        "getpass": {
+            "cwe": "CWE-676",
+            "description": "This function is obsolete and not portable. It was in SUSv2 but removed by POSIX.2.  What it does exactly varies considerably between systems, particularly in where its prompt is displayed and where it gets its data (e.g., /dev/tty, stdin, stderr, etc.). In addition, some implementations overflow buffers. (CWE-676, CWE-120, CWE-20)."
+        },
+        "gsignal": {
+            "cwe": "CWE-676",
+            "description": "These functions are considered obsolete on most systems, and very non-portable (Linux-based systems handle them radically different, basically if gsignal/ssignal were the same as raise/signal respectively, while System V considers them a separate set and obsolete) (CWE-676)."
+        },
+        "ssignal": {
+            "cwe": "CWE-676",
+            "description": "These functions are considered obsolete on most systems, and very non-portable (Linux-based systems handle them radically different, basically if gsignal/ssignal were the same as raise/signal respectively, while System V considers them a separate set and obsolete) (CWE-676)."
+        },
+        "memalign": {
+            "cwe": "CWE-676",
+            "description": "On some systems (though not Linux-based systems) an attempt to free() results from memalign() may fail. This may, on a few systems, be exploitable.  Also note that memalign() may not check that the boundary parameter is correct (CWE-676)."
+        },
+        "ulimit": {
+            "cwe": "CWE-676",
+            "description": "This C routine is considered obsolete (as opposed to the shell command by the same name, which is NOT obsolete) (CWE-676)."
+        },
+        "usleep": {
+            "cwe": "CWE-676",
+            "description": "This C routine is considered obsolete (as opposed to the shell command by the same name).   The interaction of this function with SIGALRM and other timer functions such as sleep(), alarm(), setitimer(), and nanosleep() is unspecified (CWE-676)."
+        },
+        "recv": {
+            "cwe": "CWE-20",
+            "description": "Function accepts input from outside program (CWE-20)."
+        },
+        "recvfrom": {
+            "cwe": "CWE-20",
+            "description": "Function accepts input from outside program (CWE-20)."
+        },
+        "recvmsg": {
+            "cwe": "CWE-20",
+            "description": "Function accepts input from outside program (CWE-20)."
+        },
+        "fread": {
+            "cwe": "CWE-20",
+            "description": "Function accepts input from outside program (CWE-20)."
+        },
+        "readv": {
+            "cwe": "CWE-20",
+            "description": "Function accepts input from outside program (CWE-20)."
+        },
+        "equal": {
+            "cwe": "CWE-126",
+            "description": "Function does not check the second iterator for over-read conditions (CWE-126)."
+        },
+        "mismatch": {
+            "cwe": "CWE-126",
+            "description": "Function does not check the second iterator for over-read conditions (CWE-126)."
+        },
+        "is_permutation": {
+            "cwe": "CWE-126",
+            "description": "Function does not check the second iterator for over-read conditions (CWE-126)."
+        }
+    }
+}

@@ -1,0 +1,1197 @@
+{
+    "analyzer": "Cppcheck",
+    "mapping": {
+        "purgedConfiguration": {
+            "cwe": "-",
+            "description": "The configuration '' was not checked because its code equals another one."
+        },
+        "toomanyconfigs": {
+            "cwe": "CWE-398",
+            "description": "Too many #ifdef configurations - cppcheck only checks 12 configurations. Use --force to check all configurations. For more details, use --enable=information."
+        },
+        "AssignmentAddressToInteger": {
+            "cwe": "CWE-758",
+            "description": "Assigning a pointer to an integer is not portable."
+        },
+        "AssignmentIntegerToAddress": {
+            "cwe": "CWE-758",
+            "description": "Assigning an integer to a pointer is not portable."
+        },
+        "CastIntegerToAddressAtReturn": {
+            "cwe": "CWE-758",
+            "description": "Returning an integer in a function with pointer return type is not portable."
+        },
+        "CastAddressToIntegerAtReturn": {
+            "cwe": "CWE-758",
+            "description": "Returning an address value in a function with integer return type is not portable."
+        },
+        "assertWithSideEffect": {
+            "cwe": "CWE-398",
+            "description": "Assert statement calls a function which may have desired side effects: 'function'."
+        },
+        "assignmentInAssert": {
+            "cwe": "CWE-398",
+            "description": "Assert statement modifies 'var'."
+        },
+        "autoVariables": {
+            "cwe": "CWE-562",
+            "description": "Address of local auto-variable assigned to a function parameter."
+        },
+        "returnAddressOfAutoVariable": {
+            "cwe": "CWE-562",
+            "description": "Address of an auto-variable returned."
+        },
+        "returnLocalVariable": {
+            "cwe": "CWE-562",
+            "description": "Pointer to local array variable returned."
+        },
+        "returnReference": {
+            "cwe": "CWE-562",
+            "description": "Reference to local variable returned."
+        },
+        "danglingReference": {
+            "cwe": "CWE-562",
+            "description": "Non-local reference variable 'x' to local variable 'y'"
+        },
+        "returnTempReference": {
+            "cwe": "CWE-562",
+            "description": "Reference to temporary returned."
+        },
+        "danglingTempReference": {
+            "cwe": "CWE-562",
+            "description": "Using reference to dangling temporary."
+        },
+        "autovarInvalidDeallocation": {
+            "cwe": "CWE-590",
+            "description": "Deallocation of an auto-variable results in undefined behaviour."
+        },
+        "returnAddressOfFunctionParameter": {
+            "cwe": "CWE-562",
+            "description": "Address of function parameter 'parameter' returned."
+        },
+        "uselessAssignmentArg": {
+            "cwe": "CWE-398",
+            "description": "Assignment of function parameter has no effect outside the function."
+        },
+        "uselessAssignmentPtrArg": {
+            "cwe": "CWE-398",
+            "description": "Assignment of function parameter has no effect outside the function. Did you forget dereferencing it?"
+        },
+        "returnDanglingLifetime": {
+            "cwe": "CWE-562",
+            "description": "Returning object that will be invalid when returning."
+        },
+        "invalidLifetime": {
+            "cwe": "CWE-562",
+            "description": "Using object that is out of scope."
+        },
+        "danglingLifetime": {
+            "cwe": "CWE-562",
+            "description": "Non-local variable 'x' will use object."
+        },
+        "danglingTemporaryLifetime": {
+            "cwe": "CWE-562",
+            "description": "Using object to temporary."
+        },
+        "assignBoolToPointer": {
+            "cwe": "CWE-587",
+            "description": "Boolean value assigned to pointer."
+        },
+        "assignBoolToFloat": {
+            "cwe": "CWE-704",
+            "description": "Boolean value assigned to floating point variable."
+        },
+        "comparisonOfFuncReturningBoolError": {
+            "cwe": "CWE-398",
+            "description": "Comparison of a function returning boolean value using relational (<, >, <= or >=) operator."
+        },
+        "comparisonOfTwoFuncsReturningBoolError": {
+            "cwe": "CWE-398",
+            "description": "Comparison of two functions returning boolean value using relational (<, >, <= or >=) operator."
+        },
+        "comparisonOfBoolWithBoolError": {
+            "cwe": "CWE-398",
+            "description": "Comparison of a variable having boolean value using relational (<, >, <= or >=) operator."
+        },
+        "incrementboolean": {
+            "cwe": "CWE-398",
+            "description": "Incrementing a variable of type 'bool' with postfix operator++ is deprecated by the C++ Standard. You should assign it the value 'true' instead."
+        },
+        "bitwiseOnBoolean": {
+            "cwe": "CWE-398",
+            "description": "Boolean expression 'expression' is used in bitwise operation. Did you mean '&&'?"
+        },
+        "compareBoolExpressionWithInt": {
+            "cwe": "CWE-398",
+            "description": "Comparison of a boolean expression with an integer other than 0 or 1."
+        },
+        "pointerArithBool": {
+            "cwe": "CWE-571",
+            "description": "Converting pointer arithmetic result to bool. The bool is always true unless there is undefined behaviour."
+        },
+        "comparisonOfBoolWithInvalidComparator": {
+            "cwe": "-",
+            "description": "Comparison of a boolean value using relational operator (<, >, <= or >=)."
+        },
+        "returnNonBoolInBooleanFunction": {
+            "cwe": "-",
+            "description": "Non-boolean value returned from function returning bool"
+        },
+        "boostForeachError": {
+            "cwe": "CWE-664",
+            "description": "BOOST_FOREACH caches the end() iterator. It's undefined behavior if you modify the container inside."
+        },
+        "arrayIndexOutOfBounds": {
+            "cwe": "CWE-788",
+            "description": "Array 'arr[16]' accessed at index 16, which is out of bounds."
+        },
+        "arrayIndexOutOfBoundsCond": {
+            "cwe": "CWE-788",
+            "description": "Array 'arr[16]' accessed at index 16, which is out of bounds."
+        },
+        "pointerOutOfBounds": {
+            "cwe": "CWE-758",
+            "description": "Pointer arithmetic overflow."
+        },
+        "negativeIndex": {
+            "cwe": "CWE-786",
+            "description": "Negative array index"
+        },
+        "arrayIndexThenCheck": {
+            "cwe": "CWE-664",
+            "description": "Array index 'i' is used before limits check."
+        },
+        "bufferAccessOutOfBounds": {
+            "cwe": "CWE-788",
+            "description": "Buffer is accessed out of bounds: buf"
+        },
+        "objectIndex": {
+            "cwe": "CWE-758",
+            "description": "The address of local variable '' is accessed at non-zero index."
+        },
+        "invalidFunctionArg": {
+            "cwe": "CWE-628",
+            "description": "Invalid func_name() argument nr 1. The value is 0 or 1 (boolean) but the valid values are '1:4'."
+        },
+        "invalidFunctionArgBool": {
+            "cwe": "CWE-628",
+            "description": "Invalid func_name() argument nr 1. A non-boolean value is required."
+        },
+        "invalidFunctionArgStr": {
+            "cwe": "CWE-628",
+            "description": "Invalid func_name() argument nr 1. A nul-terminated string is required."
+        },
+        "ignoredReturnValue": {
+            "cwe": "CWE-252",
+            "description": "Return value of function malloc() is not used."
+        },
+        "wrongmathcall": {
+            "cwe": "CWE-758",
+            "description": "Passing value '#' to #() leads to implementation-defined result."
+        },
+        "unpreciseMathCall": {
+            "cwe": "CWE-758",
+            "description": "Expression '1 - erf(x)' can be replaced by 'erfc(x)' to avoid loss of precision."
+        },
+        "memsetZeroBytes": {
+            "cwe": "CWE-687",
+            "description": "memset() called to fill 0 bytes."
+        },
+        "memsetFloat": {
+            "cwe": "CWE-688",
+            "description": "The 2nd memset() argument 'varname' is a float, its representation is implementation defined."
+        },
+        "memsetValueOutOfRange": {
+            "cwe": "CWE-686",
+            "description": "The 2nd memset() argument 'varname' doesn't fit into an 'unsigned char'."
+        },
+        "noConstructor": {
+            "cwe": "CWE-398",
+            "description": "The class 'classname' does not have a constructor although it has private member variables."
+        },
+        "noExplicitConstructor": {
+            "cwe": "CWE-398",
+            "description": "Class 'classname' has a constructor with 1 argument that is not explicit."
+        },
+        "copyCtorPointerCopying": {
+            "cwe": "CWE-398",
+            "description": "Value of pointer 'var', which points to allocated memory, is copied in copy constructor instead of allocating new memory."
+        },
+        "noCopyConstructor": {
+            "cwe": "CWE-398",
+            "description": "Class 'class' does not have a copy constructor which is recommended since it has dynamic memory/resource allocation(s)."
+        },
+        "noOperatorEq": {
+            "cwe": "CWE-398",
+            "description": "Class 'class' does not have a operator= which is recommended since it has dynamic memory/resource allocation(s)."
+        },
+        "noDestructor": {
+            "cwe": "CWE-398",
+            "description": "Class 'class' does not have a destructor which is recommended since it has dynamic memory/resource allocation(s)."
+        },
+        "uninitMemberVar": {
+            "cwe": "CWE-398",
+            "description": "Member variable 'classname::varname' is not initialized in the constructor."
+        },
+        "uninitMemberVarPrivate": {
+            "cwe": "CWE-398",
+            "description": "Member variable 'classname::varnamepriv' is not initialized in the constructor."
+        },
+        "operatorEqVarError": {
+            "cwe": "CWE-398",
+            "description": "Member variable 'classname::' is not assigned a value in 'classname::operator='."
+        },
+        "unusedPrivateFunction": {
+            "cwe": "CWE-398",
+            "description": "Unused private function: 'classname::funcname'"
+        },
+        "memsetClass": {
+            "cwe": "CWE-762",
+            "description": "Using 'memfunc' on class that contains a classname."
+        },
+        "memsetClassReference": {
+            "cwe": "CWE-665",
+            "description": "Using 'memfunc' on class that contains a reference."
+        },
+        "memsetClassFloat": {
+            "cwe": "CWE-758",
+            "description": "Using memset() on class which contains a floating point number."
+        },
+        "mallocOnClassWarning": {
+            "cwe": "CWE-762",
+            "description": "Memory for class instance allocated with malloc(), but class provides constructors."
+        },
+        "mallocOnClassError": {
+            "cwe": "CWE-665",
+            "description": "Memory for class instance allocated with malloc(), but class contains a std::string."
+        },
+        "virtualDestructor": {
+            "cwe": "CWE-404",
+            "description": "Class 'Base' which is inherited by class 'Derived' does not have a virtual destructor."
+        },
+        "thisSubtraction": {
+            "cwe": "CWE-398",
+            "description": "Suspicious pointer subtraction. Did you intend to write '->'?"
+        },
+        "operatorEqRetRefThis": {
+            "cwe": "CWE-398",
+            "description": "'operator=' should return reference to 'this' instance."
+        },
+        "operatorEqMissingReturnStatement": {
+            "cwe": "CWE-398",
+            "description": "No 'return' statement in non-void function causes undefined behavior."
+        },
+        "operatorEqShouldBeLeftUnimplemented": {
+            "cwe": "CWE-398",
+            "description": "'operator=' should either return reference to 'this' instance or be declared private and left unimplemented."
+        },
+        "operatorEqToSelf": {
+            "cwe": "CWE-398",
+            "description": "'operator=' should check for assignment to self to avoid problems with dynamic memory."
+        },
+        "functionConst": {
+            "cwe": "CWE-398",
+            "description": "Technically the member function 'class::function' can be const."
+        },
+        "functionStatic": {
+            "cwe": "CWE-398",
+            "description": "Technically the member function 'class::function' can be static (but you may consider moving to unnamed namespace)."
+        },
+        "initializerList": {
+            "cwe": "CWE-398",
+            "description": "Member variable 'class::variable' is in the wrong place in the initializer list."
+        },
+        "useInitializationList": {
+            "cwe": "CWE-398",
+            "description": "Variable 'variable' is assigned in constructor body. Consider performing initialization in initialization list."
+        },
+        "selfInitialization": {
+            "cwe": "CWE-665",
+            "description": "Member variable 'var' is initialized by itself."
+        },
+        "duplInheritedMember": {
+            "cwe": "CWE-398",
+            "description": "The class 'class' defines member variable with name 'variable' also defined in its parent class 'class'."
+        },
+        "copyCtorAndEqOperator": {
+            "cwe": "-",
+            "description": "The class 'class' has 'operator=' but lack of 'copy constructor'."
+        },
+        "pureVirtualCall": {
+            "cwe": "-",
+            "description": "Call of pure virtual function 'f' in constructor."
+        },
+        "virtualCallInConstructor": {
+            "cwe": "-",
+            "description": "Virtual function 'f' is called from constructor '' at line 1. Dynamic binding is not used."
+        },
+        "missingOverride": {
+            "cwe": "-",
+            "description": "The function '' overrides a function in a base class but is not marked with a 'override' specifier."
+        },
+        "thisUseAfterFree": {
+            "cwe": "CWE-416",
+            "description": "Using member 'x' when 'this' might be invalid"
+        },
+        "unsafeClassRefMember": {
+            "cwe": "CWE-664",
+            "description": "Unsafe class: The const reference member 'UnsafeClass::var' is initialized by a const reference constructor argument. You need to be careful about lifetime issues."
+        },
+        "assignIfError": {
+            "cwe": "CWE-398",
+            "description": "Mismatching assignment and comparison, comparison '' is always false."
+        },
+        "badBitmaskCheck": {
+            "cwe": "CWE-571",
+            "description": "Result of operator '|' is always true if one operand is non-zero. Did you intend to use '&'?"
+        },
+        "comparisonError": {
+            "cwe": "CWE-398",
+            "description": "Expression '(X & 0x6) == 0x1' is always false."
+        },
+        "duplicateCondition": {
+            "cwe": "CWE-398",
+            "description": "The if condition is the same as the previous if condition"
+        },
+        "multiCondition": {
+            "cwe": "CWE-398",
+            "description": "Expression is always false because 'else if' condition matches previous condition at line 1."
+        },
+        "mismatchingBitAnd": {
+            "cwe": "CWE-398",
+            "description": "Mismatching bitmasks. Result is always 0 (X = Y & 0xf0; Z = X & 0x1; => Z=0)."
+        },
+        "oppositeInnerCondition": {
+            "cwe": "CWE-398",
+            "description": "Opposite inner 'if' condition leads to a dead code block."
+        },
+        "identicalInnerCondition": {
+            "cwe": "CWE-398",
+            "description": "Identical inner 'if' condition is always true."
+        },
+        "identicalConditionAfterEarlyExit": {
+            "cwe": "CWE-398",
+            "description": "Identical condition 'x', second condition is always false"
+        },
+        "incorrectLogicOperator": {
+            "cwe": "CWE-571",
+            "description": "Logical disjunction always evaluates to true: foo > 3 && foo < 4."
+        },
+        "redundantCondition": {
+            "cwe": "CWE-398",
+            "description": "Redundant condition: If x > 11 the condition x > 10 is always true."
+        },
+        "moduloAlwaysTrueFalse": {
+            "cwe": "CWE-398",
+            "description": "Comparison of modulo result is predetermined, because it is always less than 1."
+        },
+        "clarifyCondition": {
+            "cwe": "CWE-398",
+            "description": "Suspicious condition (assignment + comparison); Clarify expression with parentheses."
+        },
+        "knownConditionTrueFalse": {
+            "cwe": "CWE-570",
+            "description": "Condition 'x' is always false"
+        },
+        "invalidTestForOverflow": {
+            "cwe": "CWE-570",
+            "description": "Invalid test for overflow 'x + u < x'. Condition is always false unless there is overflow, and overflow is undefined behaviour."
+        },
+        "pointerAdditionResultNotNull": {
+            "cwe": "-",
+            "description": "Comparison is wrong. Result of 'ptr+1' can't be 0 unless there is pointer overflow, and pointer overflow is undefined behaviour."
+        },
+        "duplicateConditionalAssign": {
+            "cwe": "CWE-398",
+            "description": "Duplicate expression for the condition and assignment."
+        },
+        "exceptThrowInDestructor": {
+            "cwe": "CWE-398",
+            "description": "Class Class is not safe, destructor throws exception"
+        },
+        "exceptDeallocThrow": {
+            "cwe": "CWE-398",
+            "description": "Exception thrown in invalid state, 'p' points at deallocated memory."
+        },
+        "exceptRethrowCopy": {
+            "cwe": "CWE-398",
+            "description": "Throwing a copy of the caught exception instead of rethrowing the original exception."
+        },
+        "catchExceptionByValue": {
+            "cwe": "CWE-398",
+            "description": "Exception should be caught by reference."
+        },
+        "throwInNoexceptFunction": {
+            "cwe": "CWE-398",
+            "description": "Exception thrown in function declared not to throw exceptions."
+        },
+        "unhandledExceptionSpecification": {
+            "cwe": "CWE-703",
+            "description": "Unhandled exception specification when calling function foo()."
+        },
+        "coutCerrMisusage": {
+            "cwe": "CWE-398",
+            "description": "Invalid usage of output stream: '<< std::cout'."
+        },
+        "fflushOnInputStream": {
+            "cwe": "CWE-398",
+            "description": "fflush() called on input stream 'stdin' may result in undefined behaviour on non-linux systems."
+        },
+        "IOWithoutPositioning": {
+            "cwe": "CWE-664",
+            "description": "Read and write operations without a call to a positioning function (fseek, fsetpos or rewind) or fflush in between result in undefined behaviour."
+        },
+        "readWriteOnlyFile": {
+            "cwe": "CWE-664",
+            "description": "Read operation on a file that was opened only for writing."
+        },
+        "writeReadOnlyFile": {
+            "cwe": "CWE-664",
+            "description": "Write operation on a file that was opened only for reading."
+        },
+        "useClosedFile": {
+            "cwe": "CWE-910",
+            "description": "Used file that is not opened."
+        },
+        "seekOnAppendedFile": {
+            "cwe": "CWE-398",
+            "description": "Repositioning operation performed on a file opened in append mode has no effect."
+        },
+        "invalidscanf": {
+            "cwe": "CWE-119",
+            "description": "scanf() without field width limits can crash with huge input data."
+        },
+        "wrongPrintfScanfArgNum": {
+            "cwe": "CWE-685",
+            "description": "printf format string requires 3 parameters but only 2 are given."
+        },
+        "invalidScanfArgType_s": {
+            "cwe": "CWE-686",
+            "description": "%s in format string (no. 1) requires a 'char *' but the argument type is Unknown."
+        },
+        "invalidScanfArgType_int": {
+            "cwe": "CWE-686",
+            "description": "%d in format string (no. 1) requires 'int *' but the argument type is Unknown."
+        },
+        "invalidScanfArgType_float": {
+            "cwe": "CWE-686",
+            "description": "%f in format string (no. 1) requires 'float *' but the argument type is Unknown."
+        },
+        "invalidPrintfArgType_s": {
+            "cwe": "CWE-686",
+            "description": "%s in format string (no. 1) requires 'char *' but the argument type is Unknown."
+        },
+        "invalidPrintfArgType_n": {
+            "cwe": "CWE-686",
+            "description": "%n in format string (no. 1) requires 'int *' but the argument type is Unknown."
+        },
+        "invalidPrintfArgType_p": {
+            "cwe": "CWE-686",
+            "description": "%p in format string (no. 1) requires an address but the argument type is Unknown."
+        },
+        "invalidPrintfArgType_uint": {
+            "cwe": "CWE-686",
+            "description": "%u in format string (no. 1) requires 'unsigned int' but the argument type is Unknown."
+        },
+        "invalidPrintfArgType_sint": {
+            "cwe": "CWE-686",
+            "description": "%i in format string (no. 1) requires 'int' but the argument type is Unknown."
+        },
+        "invalidPrintfArgType_float": {
+            "cwe": "CWE-686",
+            "description": "%f in format string (no. 1) requires 'double' but the argument type is Unknown."
+        },
+        "invalidLengthModifierError": {
+            "cwe": "CWE-704",
+            "description": "'I' in format string (no. 1) is a length modifier and cannot be used without a conversion specifier."
+        },
+        "invalidScanfFormatWidth": {
+            "cwe": "CWE-687",
+            "description": "Width 5 given in format string (no. 10) is larger than destination buffer '[0]', use %-1s to prevent overflowing it."
+        },
+        "invalidScanfFormatWidth_smaller": {
+            "cwe": "CWE-687",
+            "description": "Width -1 given in format string (no. 99) is smaller than destination buffer '[0]'."
+        },
+        "wrongPrintfScanfParameterPositionError": {
+            "cwe": "CWE-685",
+            "description": "printf: referencing parameter 2 while 1 arguments given"
+        },
+        "deallocret": {
+            "cwe": "CWE-672",
+            "description": "Returning/dereferencing 'p' after it is deallocated / released"
+        },
+        "doubleFree": {
+            "cwe": "CWE-415",
+            "description": "Memory pointed to by 'varname' is freed twice."
+        },
+        "leakNoVarFunctionCall": {
+            "cwe": "CWE-772",
+            "description": "Allocation with funcName, funcName doesn't release it."
+        },
+        "leakReturnValNotUsed": {
+            "cwe": "CWE-771",
+            "description": "Return value of allocation function 'funcName' is not stored."
+        },
+        "leakUnsafeArgAlloc": {
+            "cwe": "CWE-401",
+            "description": "Unsafe allocation. If funcName() throws, memory could be leaked. Use make_shared<int>() instead."
+        },
+        "publicAllocationError": {
+            "cwe": "CWE-398",
+            "description": "Possible leak in public function. The pointer 'varname' is not deallocated before it is allocated."
+        },
+        "unsafeClassCanLeak": {
+            "cwe": "CWE-398",
+            "description": "Class 'class' is unsafe, 'class::varname' can leak by wrong usage."
+        },
+        "memleak": {
+            "cwe": "CWE-401",
+            "description": "Memory leak: varname"
+        },
+        "resourceLeak": {
+            "cwe": "CWE-775",
+            "description": "Resource leak: varname"
+        },
+        "deallocDealloc": {
+            "cwe": "CWE-415",
+            "description": "Deallocating a deallocated pointer: varname"
+        },
+        "deallocuse": {
+            "cwe": "CWE-416",
+            "description": "Dereferencing 'varname' after it is deallocated / released"
+        },
+        "mismatchSize": {
+            "cwe": "CWE-131",
+            "description": "The allocated size sz is not a multiple of the underlying type's size."
+        },
+        "mismatchAllocDealloc": {
+            "cwe": "CWE-762",
+            "description": "Mismatching allocation and deallocation: varname"
+        },
+        "memleakOnRealloc": {
+            "cwe": "CWE-401",
+            "description": "Common realloc mistake: 'varname' nulled but not freed upon failure"
+        },
+        "nullPointer": {
+            "cwe": "CWE-476",
+            "description": "Null pointer dereference"
+        },
+        "nullPointerDefaultArg": {
+            "cwe": "CWE-476",
+            "description": "Possible null pointer dereference if the default parameter value is used: pointer"
+        },
+        "nullPointerRedundantCheck": {
+            "cwe": "CWE-476",
+            "description": "Either the condition is redundant or there is possible null pointer dereference: pointer."
+        },
+        "nullPointerArithmetic": {
+            "cwe": "CWE-682",
+            "description": "Pointer arithmetic with NULL pointer."
+        },
+        "nullPointerArithmeticRedundantCheck": {
+            "cwe": "CWE-682",
+            "description": "Either the condition is redundant or there is pointer arithmetic with NULL pointer."
+        },
+        "zerodiv": {
+            "cwe": "CWE-369",
+            "description": "Division by zero."
+        },
+        "zerodivcond": {
+            "cwe": "CWE-369",
+            "description": "Either the condition is redundant or there is division by zero."
+        },
+        "unusedScopedObject": {
+            "cwe": "CWE-563",
+            "description": "Instance of 'varname' object is destroyed immediately."
+        },
+        "invalidPointerCast": {
+            "cwe": "CWE-704",
+            "description": "Casting between float * and double * which have an incompatible binary data representation."
+        },
+        "shiftNegativeLHS": {
+            "cwe": "CWE-758",
+            "description": "Shifting a negative value is technically undefined behaviour"
+        },
+        "shiftNegative": {
+            "cwe": "CWE-758",
+            "description": "Shifting by a negative value is undefined behaviour"
+        },
+        "wrongPipeParameterSize": {
+            "cwe": "CWE-686",
+            "description": "Buffer 'varname' must have size of 2 integers if used as parameter of pipe()."
+        },
+        "raceAfterInterlockedDecrement": {
+            "cwe": "CWE-362",
+            "description": "Race condition: non-interlocked access after InterlockedDecrement(). Use InterlockedDecrement() return value instead."
+        },
+        "invalidFree": {
+            "cwe": "CWE-763",
+            "description": "Mismatching address is freed. The address you get from malloc() must be freed without offset."
+        },
+        "redundantCopyLocalConst": {
+            "cwe": "CWE-398",
+            "description": "Use const reference for 'varname' to avoid unnecessary data copying."
+        },
+        "redundantCopy": {
+            "cwe": "CWE-563",
+            "description": "Buffer 'var' is being written before its old content has been used."
+        },
+        "comparisonFunctionIsAlwaysTrueOrFalse": {
+            "cwe": "CWE-570",
+            "description": "Comparison of two identical variables with isless(varName,varName) always evaluates to false."
+        },
+        "checkCastIntToCharAndBack": {
+            "cwe": "CWE-197",
+            "description": "Storing func_name() return value in char variable and then comparing with EOF."
+        },
+        "cstyleCast": {
+            "cwe": "CWE-398",
+            "description": "C-style pointer casting"
+        },
+        "passedByValue": {
+            "cwe": "CWE-398",
+            "description": "Function parameter 'parametername' should be passed by const reference."
+        },
+        "constVariable": {
+            "cwe": "CWE-398",
+            "description": "Variable 'x' can be declared with const"
+        },
+        "constStatement": {
+            "cwe": "CWE-398",
+            "description": "Redundant code: Found a statement that begins with type constant."
+        },
+        "signedCharArrayIndex": {
+            "cwe": "CWE-128",
+            "description": "Signed 'char' type used as array index."
+        },
+        "unknownSignCharArrayIndex": {
+            "cwe": "CWE-758",
+            "description": "'char' type used as array index."
+        },
+        "charBitOp": {
+            "cwe": "CWE-398",
+            "description": "When using 'char' variables in bit operations, sign extension can generate unexpected results."
+        },
+        "variableScope": {
+            "cwe": "CWE-398",
+            "description": "The scope of the variable 'varname' can be reduced."
+        },
+        "redundantAssignInSwitch": {
+            "cwe": "CWE-563",
+            "description": "Variable 'var' is reassigned a value before the old one has been used. 'break;' missing?"
+        },
+        "redundantCopyInSwitch": {
+            "cwe": "CWE-563",
+            "description": "Buffer 'var' is being written before its old content has been used. 'break;' missing?"
+        },
+        "suspiciousCase": {
+            "cwe": "CWE-398",
+            "description": "Found suspicious case label in switch(). Operator '||' probably doesn't work as intended."
+        },
+        "selfAssignment": {
+            "cwe": "CWE-398",
+            "description": "Redundant assignment of 'varname' to itself."
+        },
+        "clarifyCalculation": {
+            "cwe": "CWE-783",
+            "description": "Clarify calculation precedence for '+' and '?'."
+        },
+        "clarifyStatement": {
+            "cwe": "CWE-783",
+            "description": "In expression like '*A++' the result of '*' is unused. Did you intend to write '(*A)++;'?"
+        },
+        "duplicateBranch": {
+            "cwe": "CWE-398",
+            "description": "Found duplicate branches for 'if' and 'else'."
+        },
+        "duplicateAssignExpression": {
+            "cwe": "CWE-398",
+            "description": "Same expression used in consecutive assignments of 'x' and 'x'."
+        },
+        "oppositeExpression": {
+            "cwe": "CWE-398",
+            "description": "Opposite expression on both sides of '&&'."
+        },
+        "duplicateExpression": {
+            "cwe": "CWE-398",
+            "description": "Same expression on both sides of '&&'."
+        },
+        "duplicateValueTernary": {
+            "cwe": "CWE-398",
+            "description": "Same value in both branches of ternary operator."
+        },
+        "duplicateExpressionTernary": {
+            "cwe": "CWE-398",
+            "description": "Same expression in both branches of ternary operator."
+        },
+        "duplicateBreak": {
+            "cwe": "CWE-561",
+            "description": "Consecutive return, break, continue, goto or throw statements are unnecessary."
+        },
+        "unreachableCode": {
+            "cwe": "CWE-561",
+            "description": "Statements following return, break, continue, goto or throw will never be executed."
+        },
+        "unsignedLessThanZero": {
+            "cwe": "CWE-570",
+            "description": "Checking if unsigned expression 'varname' is less than zero."
+        },
+        "unsignedPositive": {
+            "cwe": "CWE-570",
+            "description": "Unsigned expression 'varname' can't be negative so it is unnecessary to test it."
+        },
+        "pointerLessThanZero": {
+            "cwe": "CWE-570",
+            "description": "A pointer can not be negative so it is either pointless or an error to check if it is."
+        },
+        "pointerPositive": {
+            "cwe": "CWE-570",
+            "description": "A pointer can not be negative so it is either pointless or an error to check if it is not."
+        },
+        "suspiciousSemicolon": {
+            "cwe": "CWE-398",
+            "description": "Suspicious use of ; at the end of '' statement."
+        },
+        "incompleteArrayFill": {
+            "cwe": "CWE-131",
+            "description": "Array 'buffer' is filled incompletely. Did you forget to multiply the size given to 'memset()' with 'sizeof(*buffer)'?"
+        },
+        "varFuncNullUB": {
+            "cwe": "CWE-475",
+            "description": "Passing NULL after the last typed argument to a variadic function leads to undefined behaviour."
+        },
+        "nanInArithmeticExpression": {
+            "cwe": "CWE-369",
+            "description": "Using NaN/Inf in a computation."
+        },
+        "commaSeparatedReturn": {
+            "cwe": "CWE-398",
+            "description": "Comma is used in return statement. The comma can easily be misread as a ';'."
+        },
+        "redundantPointerOp": {
+            "cwe": "CWE-398",
+            "description": "Redundant pointer operation on 'varname' - it's already a pointer."
+        },
+        "unusedLabel": {
+            "cwe": "CWE-398",
+            "description": "Label '' is not used."
+        },
+        "unusedLabelConfiguration": {
+            "cwe": "CWE-398",
+            "description": "Label '' is not used. There is #if in function body so the label might be used in code that is removed by the preprocessor."
+        },
+        "unusedLabelSwitch": {
+            "cwe": "CWE-398",
+            "description": "Label '' is not used. Should this be a 'case' of the enclosing switch()?"
+        },
+        "unusedLabelSwitchConfiguration": {
+            "cwe": "CWE-398",
+            "description": "Label '' is not used. There is #if in function body so the label might be used in code that is removed by the preprocessor. Should this be a 'case' of the enclosing switch()?"
+        },
+        "unknownEvaluationOrder": {
+            "cwe": "CWE-768",
+            "description": "Expression 'x = x++;' depends on order of evaluation of side effects"
+        },
+        "accessMoved": {
+            "cwe": "CWE-672",
+            "description": "Access of moved variable 'v'."
+        },
+        "accessForwarded": {
+            "cwe": "CWE-672",
+            "description": "Access of forwarded variable 'v'."
+        },
+        "funcArgNamesDifferent": {
+            "cwe": "CWE-628",
+            "description": "Function 'function' argument 2 names different: declaration 'A' definition 'B'."
+        },
+        "redundantBitwiseOperationInSwitch": {
+            "cwe": "-",
+            "description": "Redundant bitwise operation on 'varname' in 'switch' statement. 'break;' missing?"
+        },
+        "shadowVariable": {
+            "cwe": "CWE-398",
+            "description": "Local variable 'variable' shadows outer variable"
+        },
+        "shadowFunction": {
+            "cwe": "CWE-398",
+            "description": "Local variable 'function' shadows outer function"
+        },
+        "shadowArgument": {
+            "cwe": "CWE-398",
+            "description": "Local variable 'argument' shadows outer argument"
+        },
+        "knownArgument": {
+            "cwe": "-",
+            "description": "Argument 'x-x' to function 'func' is always 0. It does not matter what value 'x' has."
+        },
+        "knownArgumentHiddenVariableExpression": {
+            "cwe": "-",
+            "description": "Argument 'x*0' to function 'func' is always 0. Constant literal calculation disable/hide variable expression 'x'."
+        },
+        "comparePointers": {
+            "cwe": "CWE-570",
+            "description": "Comparing pointers that point to different objects"
+        },
+        "redundantAssignment": {
+            "cwe": "CWE-563",
+            "description": "Variable 'var' is reassigned a value before the old one has been used."
+        },
+        "redundantInitialization": {
+            "cwe": "CWE-563",
+            "description": "Redundant initialization for 'var'. The initialized value is overwritten before it is read."
+        },
+        "funcArgOrderDifferent": {
+            "cwe": "CWE-683",
+            "description": "Function 'function' argument order different: declaration '' definition ''"
+        },
+        "moduloofone": {
+            "cwe": "-",
+            "description": "Modulo of one is always equal to zero"
+        },
+        "containerOutOfBounds": {
+            "cwe": "CWE-119",
+            "description": "Out of bounds access in expression 'container[x]'"
+        },
+        "invalidIterator1": {
+            "cwe": "CWE-664",
+            "description": "Invalid iterator: iterator"
+        },
+        "iterators1": {
+            "cwe": "CWE-664",
+            "description": "Same iterator is used with different containers 'container1' and 'container2'."
+        },
+        "iterators2": {
+            "cwe": "CWE-664",
+            "description": "Same iterator is used with different containers 'container0' and 'container1'."
+        },
+        "iterators3": {
+            "cwe": "CWE-664",
+            "description": "Same iterator is used with containers 'container' that are defined in different scopes."
+        },
+        "invalidContainerLoop": {
+            "cwe": "CWE-664",
+            "description": "Calling 'erase' while iterating the container is invalid."
+        },
+        "invalidContainer": {
+            "cwe": "CWE-664",
+            "description": "Using object that may be invalid."
+        },
+        "mismatchingContainerIterator": {
+            "cwe": "CWE-664",
+            "description": "Iterator 'it' from different container 'v1' are used together."
+        },
+        "mismatchingContainers": {
+            "cwe": "CWE-664",
+            "description": "Iterators of different containers 'v1' and 'v2' are used together."
+        },
+        "mismatchingContainerExpression": {
+            "cwe": "CWE-664",
+            "description": "Iterators to containers from different expressions 'v1' and 'v2' are used together."
+        },
+        "sameIteratorExpression": {
+            "cwe": "CWE-664",
+            "description": "Same iterators expression are used for algorithm."
+        },
+        "eraseDereference": {
+            "cwe": "CWE-664",
+            "description": "Invalid iterator 'iter' used."
+        },
+        "stlOutOfBounds": {
+            "cwe": "CWE-788",
+            "description": "When i==foo.size(), foo[i] is out of bounds."
+        },
+        "negativeContainerIndex": {
+            "cwe": "CWE-786",
+            "description": "Array index -1 is out of bounds."
+        },
+        "stlBoundaries": {
+            "cwe": "CWE-664",
+            "description": "Dangerous comparison using operator< on iterator."
+        },
+        "stlIfFind": {
+            "cwe": "CWE-398",
+            "description": "Suspicious condition. The result of find() is an iterator, but it is not properly checked."
+        },
+        "stlIfStrFind": {
+            "cwe": "CWE-597",
+            "description": "Inefficient usage of string::find() in condition; string::starts_with() could be faster."
+        },
+        "stlFindInsert": {
+            "cwe": "CWE-398",
+            "description": "Searching before insertion is not necessary."
+        },
+        "stlcstr": {
+            "cwe": "CWE-664",
+            "description": "Dangerous usage of c_str(). The value returned by c_str() is invalid after this call."
+        },
+        "stlcstrReturn": {
+            "cwe": "CWE-704",
+            "description": "Returning the result of c_str() in a function that returns std::string is slow and redundant."
+        },
+        "stlcstrParam": {
+            "cwe": "CWE-704",
+            "description": "Passing the result of c_str() to a function that takes std::string as argument no. 0 is slow and redundant."
+        },
+        "stlcstrthrow": {
+            "cwe": "CWE-664",
+            "description": "Dangerous usage of c_str(). The value returned by c_str() is invalid after throwing exception."
+        },
+        "stlSize": {
+            "cwe": "CWE-398",
+            "description": "Possible inefficient checking for 'list' emptiness."
+        },
+        "StlMissingComparison": {
+            "cwe": "CWE-834",
+            "description": "Missing bounds check for extra iterator increment in loop."
+        },
+        "redundantIfRemove": {
+            "cwe": "CWE-398",
+            "description": "Redundant checking of STL container element existence before removing it."
+        },
+        "uselessCallsCompare": {
+            "cwe": "CWE-628",
+            "description": "It is inefficient to call 'str.find(str)' as it always returns 0."
+        },
+        "uselessCallsSwap": {
+            "cwe": "CWE-628",
+            "description": "It is inefficient to swap a object with itself by calling 'str.swap(str)'"
+        },
+        "uselessCallsSubstr": {
+            "cwe": "CWE-398",
+            "description": "Ineffective call of function 'substr' because it returns a copy of the object. Use operator= instead."
+        },
+        "uselessCallsEmpty": {
+            "cwe": "CWE-398",
+            "description": "Ineffective call of function 'empty()'. Did you intend to call 'clear()' instead?"
+        },
+        "uselessCallsRemove": {
+            "cwe": "CWE-762",
+            "description": "Return value of std::remove() ignored. Elements remain in container."
+        },
+        "derefInvalidIterator": {
+            "cwe": "CWE-825",
+            "description": "Possible dereference of an invalid iterator: i"
+        },
+        "reademptycontainer": {
+            "cwe": "CWE-398",
+            "description": "Reading from empty STL container 'var'"
+        },
+        "useStlAlgorithm": {
+            "cwe": "CWE-398",
+            "description": "Consider using  algorithm instead of a raw loop."
+        },
+        "knownEmptyContainer": {
+            "cwe": "CWE-398",
+            "description": "Iterating over container 'var' that is always empty."
+        },
+        "globalLockGuard": {
+            "cwe": "CWE-833",
+            "description": "Lock guard is defined globally. Lock guards are intended to be local. A global lock guard could lead to a deadlock since it won't unlock until the end of the program."
+        },
+        "localMutex": {
+            "cwe": "CWE-667",
+            "description": "The lock is ineffective because the mutex is locked at the same scope as the mutex itself."
+        },
+        "sizeofwithsilentarraypointer": {
+            "cwe": "CWE-467",
+            "description": "Using 'sizeof' on array given as function argument returns size of a pointer."
+        },
+        "pointerSize": {
+            "cwe": "CWE-467",
+            "description": "Size of pointer 'varname' used instead of size of its data."
+        },
+        "sizeofDivisionMemfunc": {
+            "cwe": "CWE-682",
+            "description": "Division by result of sizeof(). memset() expects a size in bytes, did you intend to multiply instead?"
+        },
+        "sizeofwithnumericparameter": {
+            "cwe": "CWE-682",
+            "description": "Suspicious usage of 'sizeof' with a numeric constant as parameter."
+        },
+        "sizeofsizeof": {
+            "cwe": "CWE-682",
+            "description": "Calling 'sizeof' on 'sizeof'."
+        },
+        "sizeofCalculation": {
+            "cwe": "CWE-682",
+            "description": "Found calculation inside sizeof()."
+        },
+        "sizeofFunctionCall": {
+            "cwe": "CWE-682",
+            "description": "Found function call inside sizeof()."
+        },
+        "multiplySizeof": {
+            "cwe": "CWE-682",
+            "description": "Multiplying sizeof() with sizeof() indicates a logic error."
+        },
+        "divideSizeof": {
+            "cwe": "CWE-682",
+            "description": "Division of result of sizeof() on pointer type."
+        },
+        "sizeofVoid": {
+            "cwe": "CWE-682",
+            "description": "Behaviour of 'sizeof(void)' is not covered by the ISO C standard."
+        },
+        "sizeofDereferencedVoidPointer": {
+            "cwe": "CWE-682",
+            "description": "'*varname' is of type 'void', the behaviour of 'sizeof(void)' is not covered by the ISO C standard."
+        },
+        "arithOperationsOnVoidPointer": {
+            "cwe": "CWE-467",
+            "description": "'varname' is of type 'vartype'. When using void pointers in calculations, the behaviour is undefined."
+        },
+        "stringLiteralWrite": {
+            "cwe": "CWE-758",
+            "description": "Modifying string literal directly or indirectly is undefined behaviour."
+        },
+        "sprintfOverlappingData": {
+            "cwe": "CWE-628",
+            "description": "Undefined behavior: Variable 'varname' is used as parameter and destination in s[n]printf()."
+        },
+        "strPlusChar": {
+            "cwe": "CWE-665",
+            "description": "Unusual pointer arithmetic. A value of type 'char' is added to a string literal."
+        },
+        "incorrectStringCompare": {
+            "cwe": "CWE-570",
+            "description": "String literal \"Hello World\" doesn't match length argument for substr()."
+        },
+        "literalWithCharPtrCompare": {
+            "cwe": "CWE-595",
+            "description": "String literal compared with variable 'foo'. Did you intend to use strcmp() instead?"
+        },
+        "charLiteralWithCharPtrCompare": {
+            "cwe": "CWE-595",
+            "description": "Char literal compared with pointer 'foo'. Did you intend to dereference it?"
+        },
+        "incorrectStringBooleanError": {
+            "cwe": "CWE-571",
+            "description": "Conversion of string literal \"Hello World\" to bool always evaluates to true."
+        },
+        "incorrectCharBooleanError": {
+            "cwe": "CWE-571",
+            "description": "Conversion of char literal 'x' to bool always evaluates to true."
+        },
+        "staticStringCompare": {
+            "cwe": "CWE-570",
+            "description": "Unnecessary comparison of static strings."
+        },
+        "stringCompare": {
+            "cwe": "CWE-571",
+            "description": "Comparison of identical string variables."
+        },
+        "overlappingStrcmp": {
+            "cwe": "-",
+            "description": "The expression 'strcmp(x,\"def\") != 0' is suspicious. It overlaps 'strcmp(x,\"abc\") == 0'."
+        },
+        "shiftTooManyBits": {
+            "cwe": "CWE-758",
+            "description": "Shifting 32-bit value by 40 bits is undefined behaviour"
+        },
+        "shiftTooManyBitsSigned": {
+            "cwe": "CWE-758",
+            "description": "Shifting signed 32-bit value by 31 bits is implementation-defined behaviour"
+        },
+        "integerOverflow": {
+            "cwe": "CWE-190",
+            "description": "Signed integer overflow for expression ''."
+        },
+        "signConversion": {
+            "cwe": "CWE-195",
+            "description": "Expression 'var' can have a negative value. That is converted to an unsigned value and used in an unsigned calculation."
+        },
+        "truncLongCastAssignment": {
+            "cwe": "CWE-197",
+            "description": "int result is assigned to long variable. If the variable is long to avoid loss of information, then you have loss of information."
+        },
+        "truncLongCastReturn": {
+            "cwe": "CWE-197",
+            "description": "int result is returned as long value. If the return value is long to avoid loss of information, then you have loss of information."
+        },
+        "floatConversionOverflow": {
+            "cwe": "CWE-190",
+            "description": "Undefined behaviour: float (1e+100) to integer conversion overflow."
+        },
+        "uninitstring": {
+            "cwe": "CWE-676",
+            "description": "Dangerous usage of 'varname' (strncpy doesn't always null-terminate it)."
+        },
+        "uninitdata": {
+            "cwe": "CWE-457",
+            "description": "Memory is allocated but not initialized: varname"
+        },
+        "uninitvar": {
+            "cwe": "CWE-457",
+            "description": "Uninitialized variable: varname"
+        },
+        "uninitStructMember": {
+            "cwe": "CWE-457",
+            "description": "Uninitialized struct member: a.b"
+        },
+        "unusedFunction": {
+            "cwe": "CWE-561",
+            "description": "The function 'funcName' is never used."
+        },
+        "unusedVariable": {
+            "cwe": "CWE-563",
+            "description": "Unused variable: varname"
+        },
+        "unusedAllocatedMemory": {
+            "cwe": "CWE-563",
+            "description": "Variable 'varname' is allocated memory that is never used."
+        },
+        "unreadVariable": {
+            "cwe": "CWE-563",
+            "description": "Variable 'varname' is assigned a value that is never used."
+        },
+        "unassignedVariable": {
+            "cwe": "CWE-665",
+            "description": "Variable 'varname' is not assigned a value."
+        },
+        "unusedStructMember": {
+            "cwe": "CWE-563",
+            "description": "struct member 'structname::variable' is never used."
+        },
+        "postfixOperator": {
+            "cwe": "CWE-398",
+            "description": "Prefer prefix ++/-- operators for non-primitive types."
+        },
+        "va_start_wrongParameter": {
+            "cwe": "CWE-688",
+            "description": "'arg1' given to va_start() is not last named argument of the function. Did you intend to pass 'arg2'?"
+        },
+        "va_start_referencePassed": {
+            "cwe": "CWE-758",
+            "description": "Using reference 'arg1' as parameter for va_start() results in undefined behaviour."
+        },
+        "va_end_missing": {
+            "cwe": "CWE-664",
+            "description": "va_list 'vl' was opened but not closed by va_end()."
+        },
+        "va_list_usedBeforeStarted": {
+            "cwe": "CWE-664",
+            "description": "va_list 'vl' used before va_start() was called."
+        },
+        "va_start_subsequentCalls": {
+            "cwe": "CWE-664",
+            "description": "va_start() or va_copy() called subsequently on 'vl' without va_end() in between."
+        },
+        "missingInclude": {
+            "cwe": "-",
+            "description": "Include file: \"\" not found."
+        },
+        "missingIncludeSystem": {
+            "cwe": "-",
+            "description": "Include file: <> not found. Please note: Cppcheck does not need standard library headers to get proper results."
+        },
+        "ConfigurationNotChecked": {
+            "cwe": "-",
+            "description": "Skipping configuration 'X' since the value of 'X' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly."
+        },
+        "preprocessorErrorDirective": {
+            "cwe": "-",
+            "description": "#error message"
+        }
+    }
+}

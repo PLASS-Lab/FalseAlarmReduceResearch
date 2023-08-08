@@ -1,0 +1,73 @@
+{
+    "analyzer": "Infer",
+    "mapping": {
+        "USE_AFTER_LIFETIME": {
+            "cwe": "CWE-826",
+            "description": ""
+        },
+        "UNINITIALIZED_VALUE": {
+            "cwe": "CWE-457",
+            "description": ""
+        },
+        "USE_AFTER_FREE": {
+            "cwe": "CWE-416",
+            "description": ""
+        },
+        "SHELL_INJECTION": {
+            "cwe": "CWE-807",
+            "description": ""
+        },
+        "NULL_DEREFERENCE": {
+            "cwe": "CWE-476",
+            "description": ""
+        },
+        "MEMORY_LEAK": {
+            "cwe": "CWE-789",
+            "description": ""
+        },
+        "RESOURCE_LEAK": {
+            "cwe": "CWE-402",
+            "description": ""
+        },
+        "DEAD_STORE": {
+            "cwe": "CWE-1076",
+            "description": ""
+        },
+        "BUFFER_OVERRUN_L1": {
+            "cwe": "CWE-119",
+            "description": ""
+        },
+        "BUFFER_OVERRUN_L2": {
+            "cwe": "CWE-119",
+            "description": ""
+        },
+        "BUFFER_OVERRUN_L3": {
+            "cwe": "CWE-119",
+            "description": ""
+        },
+        "BUFFER_OVERRUN_L4": {
+            "cwe": "CWE-119",
+            "description": ""
+        },
+        "BUFFER_OVERRUN_L5": {
+            "cwe": "CWE-119",
+            "description": ""
+        },
+        "BUFFER_OVERRUN_S2": {
+            "cwe": "CWE-119",
+            "description": ""
+        },
+        "BUFFER_OVERRUN_U5": {
+            "cwe": "CWE-119",
+            "description": ""
+        },
+        "INFERBO_ALLOC_IS_NEGATIVE": {
+            "cwe": "CWE-119",
+            "description": ""
+        },
+        "INFERBO_ALLOC_IS_ZERO": {
+            "cwe": "CWE-131",
+            "description": ""
+        }
+    }
+}
