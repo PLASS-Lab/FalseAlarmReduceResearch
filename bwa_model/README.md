@@ -1,8 +1,8 @@
 
 # Training
 
-python3 train.py --train_csv_path=example_datasets/old/train.csv \
-                  --val_csv_path=example_datasets/old/val.csv \
+python3 train.py --train_csv_path=dataset/train.csv \
+                  --val_csv_path=dataset/val.csv \
                   --num_classes=120 \
                   --do_train \
                   --model_name_or_path="neulab/codebert-cpp" \
@@ -12,7 +12,7 @@ python3 train.py --train_csv_path=example_datasets/old/train.csv \
 
 # Testing
 
-python3 test.py --csv_path=example_datasets/test.csv\
+python3 test.py --csv_path=dataset/test.csv\
                 --num_classes=120\
                 --model_name_or_path='neulab/codebert-cpp'\
                 --save_predict="./pred.json"\
