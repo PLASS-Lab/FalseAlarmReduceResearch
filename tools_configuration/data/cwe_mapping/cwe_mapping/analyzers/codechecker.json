@@ -1,0 +1,193 @@
+{
+    "analyzer": "CodeChecker",
+    "mapping": {
+        "core.NonNullParamChecker": {
+            "cwe": "CWE-233",
+            "description": "Check for null pointers passed as arguments to a function whose arguments are references or marked with the 'nonnull' attribute."
+        },
+        "unix.Malloc": {
+            "cwe": "CWE-770",
+            "description": "Check for memory leaks, double free, and use-after-free problems. Traces memory managed by malloc()/free()."
+        },
+        "core.DivideZero": {
+            "cwe": "CWE-369",
+            "description": "Check for division by zero."
+        },
+        "clang-diagnostic-unused-const-variable": {
+            "cwe": "CWE-1076",
+            "description": ""
+        },
+        "misc-misplaced-widening-cast": {
+            "cwe": "CWE-704",
+            "description": ""
+        },
+        "core.uninitialized.Assign": {
+            "cwe": "CWE-908",
+            "description": "Check for assigning uninitialized values."
+        },
+        "misc-misplaced-const": {
+            "cwe": "CWE-843",
+            "description": "This check diagnoses when a const qualifier is applied to a typedef using to a pointer type rather than to the pointee, because such constructs are often misleading to developers because the const applies to the pointer rather than the pointee."
+        },
+        "clang-diagnostic-constant-conversion": {
+            "cwe": "CWE-704",
+            "description": ""
+        },
+        "core.uninitialized.UndefReturn": {
+            "cwe": "CWE-908",
+            "description": "Check for uninitialized values being returned to the caller."
+        },
+        "core.CallAndMessage": {
+            "cwe": "CWE-628",
+            "description": "Check for logical errors for function calls and Objective-C message expressions (e.g., uninitialized arguments, null function pointers)."
+        },
+        "misc-incorrect-roundings": {
+            "cwe": "CWE-682",
+            "description": ""
+        },
+        "core.uninitialized.ArraySubscript": {
+            "cwe": "CWE-129",
+            "description": "Check for uninitialized values used as array subscripts."
+        },
+        "security.FloatLoopCounter": {
+            "cwe": "CWE-1077",
+            "description": "Warn on using a floating point value as a loop counter (CERT: FLP30-C, FLP30-CPP)."
+        },
+        "clang-diagnostic-missing-field-initializers": {
+            "cwe": "CWE-665",
+            "description": ""
+        },
+        "misc-sizeof-expression": {
+            "cwe": "CWE-467",
+            "description": ""
+        },
+        "core.uninitialized.Branch": {
+            "cwe": "CWE-665",
+            "description": "Check for uninitialized values used as branch conditions."
+        },
+        "deadcode.DeadStores": {
+            "cwe": "CWE-1076",
+            "description": "Check for values stored to variables that are never read afterwards."
+        },
+        "bugprone-integer-division": {
+            "cwe": "CWE-682",
+            "description": "Finds cases where integer division in a floating point context is likely to cause unintended loss of precision."
+        },
+        "clang-diagnostic-incompatible-pointer-types": {
+            "cwe": "CWE-843",
+            "description": ""
+        },
+        "misc-redundant-expression": {
+            "cwe": "CWE-1041",
+            "description": "Detect redundant expressions which are typically errors due to copy-paste."
+        },
+        "core.NullDereference": {
+            "cwe": "CWE-476",
+            "description": "Check for dereferences of null pointers."
+        },
+        "unix.API": {
+            "cwe": "CWE-242",
+            "description": "Check calls to various UNIX/Posix functions: open, pthread_once, calloc, malloc, realloc, alloca."
+        },
+        "cplusplus.NewDeleteLeaks": {
+            "cwe": "CWE-401",
+            "description": "Check for memory leaks. Traces memory managed by new/delete."
+        },
+        "clang-diagnostic-shift-op-parentheses": {
+            "cwe": "-",
+            "description": ""
+        },
+        "misc-macro-parentheses": {
+            "cwe": "-",
+            "description": ""
+        },
+        "clang-diagnostic-unused-parameter": {
+            "cwe": "-",
+            "description": ""
+        },
+        "clang-diagnostic-incompatible-pointer-types-discards-qualifiers": {
+            "cwe": "-",
+            "description": ""
+        },
+        "clang-diagnostic-pointer-sign": {
+            "cwe": "-",
+            "description": ""
+        },
+        "clang-diagnostic-logical-op-parentheses": {
+            "cwe": "-",
+            "description": ""
+        },
+        "clang-diagnostic-switch": {
+            "cwe": "-",
+            "description": ""
+        },
+        "clang-diagnostic-implicit-function-declaration": {
+            "cwe": "-",
+            "description": ""
+        },
+        "clang-diagnostic-format": {
+            "cwe": "-",
+            "description": ""
+        },
+        "clang-diagnostic-address-of-packed-member": {
+            "cwe": "-",
+            "description": ""
+        },
+        "clang-diagnostic-parentheses": {
+            "cwe": "-",
+            "description": ""
+        },
+        "misc-macro-repeated-side-effects": {
+            "cwe": "-",
+            "description": ""
+        },
+        "clang-diagnostic-deprecated-declarations": {
+            "cwe": "-",
+            "description": ""
+        },
+        "clang-diagnostic-bitwise-op-parentheses": {
+            "cwe": "-",
+            "description": ""
+        },
+        "clang-diagnostic-unused-result": {
+            "cwe": "-",
+            "description": ""
+        },
+        "clang-diagnostic-unused-local-typedef": {
+            "cwe": "-",
+            "description": ""
+        },
+        "core.UndefinedBinaryOperatorResult": {
+            "cwe": "-",
+            "description": ""
+        },
+        "clang-diagnostic-unused-function": {
+            "cwe": "-",
+            "description": ""
+        },
+        "clang-diagnostic-logical-not-parentheses": {
+            "cwe": "-",
+            "description": ""
+        },
+        "clang-diagnostic-sign-compare": {
+            "cwe": "-",
+            "description": ""
+        },
+        "clang-diagnostic-expansion-to-defined": {
+            "cwe": "-",
+            "description": ""
+        },
+        "clang-diagnostic-absolute-value": {
+            "cwe": "-",
+            "description": ""
+        },
+        "clang-diagnostic-sometimes-uninitialized": {
+            "cwe": "-",
+            "description": ""
+        },
+        "clang-diagnostic-dangling-else": {
+            "cwe": "-",
+            "description": ""
+        }
+    }
+}
