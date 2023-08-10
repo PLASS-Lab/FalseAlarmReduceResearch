@@ -3,7 +3,7 @@
 - 해당 모델을 아키텍쳐는 다음과 같다.
 
 <p align="center">
-  <img src=".././docs/bwa_model.png" />
+  <img src="./../docs/bwa_model.png" />
   <span>BERT 모델을 이용한 라인별 보안약점 분석 모델</span>
 </p>
 
@@ -61,7 +61,7 @@ python3 data_process.py
 - BERT 모델 기반으로 라인별로 보안약점 분석 결과를 출력한 예제이다.
 
 <p align="center">
-  <img src=".././docs/bwa_result.png" /><br>
+  <img src="./../docs/bwa_result.png" /><br>
   <span>BERT 모델 기반으로 라인별로 보안약점 분석 결과 예제</span>
 </p>
 
