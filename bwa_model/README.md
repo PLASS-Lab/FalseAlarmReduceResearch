@@ -20,7 +20,7 @@
 
 ## 모듈 실치 및 실행
 1. 데이터 셋 준비
-- julietsuite 폴더에서 juliet test suite 데이터 셋 다운로드
+- julietsuite 폴더에서 juliet test suite 데이터 셋 다운로드 (README.md 참고)
 - C/C++ 소스코드부터 csv 파일 형태로 변경하고 labelling를 진행한다. (tools_configuration 및 bwa_model 모델별로 분리함)
 ```
 python3 data_process.py
