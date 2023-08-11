@@ -143,7 +143,7 @@ class TestsuiteAnalyzer(object):
 										if (location.tag == "location"):
 												print(os.path.basename(location.attrib['file']) + ",", location.attrib['line'] + ",", error_id + ",", cwe)
 						sys.stdout = sys.__stdout__
-				elif(sc.getName() == 'flawfinder'): #! need to check again
+				elif(sc.getName() == 'flawfinder'): #! need to check againF
 						cmd = sc.getCmdString(dir, '')
 						(output, err, exit, time) = dirutils.system_call(cmd, ".") 
 						dirutils.tool_exec_log(path_txt, cmd, output, err, exit)
