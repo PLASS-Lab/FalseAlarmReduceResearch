@@ -79,4 +79,4 @@ numpages = {3502}
 }
 ```
 
-<h1 align="center">Thank you for my professor for support</h1>
+<h1 align="center">Thank my professor so much for support</h1>
