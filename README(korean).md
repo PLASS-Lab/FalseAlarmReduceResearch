@@ -62,7 +62,7 @@ False Alarm Reduce Research for Weakness Analyzer
 </p>
 
 ## 논문
-Please kindly cite our paper if it benefits:
+연구에 이 코드를 사용했다면, 아래 논문을 인용해주시기 바랍니다.
 
 ```bib
 @article{FalseAlarmReduceResearch,

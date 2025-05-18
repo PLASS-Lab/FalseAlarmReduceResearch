@@ -1,72 +1,71 @@
-#  BERT 모델을 이용한 라인별로 보안약점을 분석 모델 (BWA)
-- 다수 정적 분석 도구 선택 및 실험 (Tools Configuration): 여러 정적 분석 도구를 사용해서 소스 코드 내에 보안약점을 진단한다.
-- 해당 모델을 아키텍쳐는 다음과 같다.
+[Korean](./README(Korean).md)
+
+# Tools Configuration
+- Tools Configuration involves selecting and using multiple static analysis to identify potential vulnerabilities in C/C++ source code.
+- The architecture of this component is shown below:
 
 <p align="center">
   <img src="./docs/tools.png" />
-  <span>BERT 모델을 이용한 라인별 보안약점 분석 모델</span>
+  <span>Architecture for Line-Level Vulnerability Analysis Using BERT</span>
 </p>
 
-## 모델 파일 구조
-- 해당 모델을 구현하기 위해서 파일 구조는 다음과 같다.
+## File Structure
+- The following file structure is used to implement this model
 ```
-- data: 데이터를 저장하는 폴더
-- tmpData: 도구를 통해서 결과를 저장하는 폴더
-- tools-usage: 도구별로 사용법 파일
-- docker: Docker 환경을 실행하기 위해서 Docker 파일
-- AnalyzeToolConfig: config 파일로 부터 설정한 정보를 받아서 도구를 paramater 및 option 설정
+- data: Folder for storing dataset
+- tmpData: Folder for storing tool output results
+- tools-usage: Usage documentation for each analysis tool
+- docker: Dockerfiles to run the tools in a containerized environment
+- AnalyzeToolConfig: Parses configuration files and sets tool parameters and options
   - buildScannerList()
   - getCCppScannerList()
-- CompareTool: 도구는 testsuite의 기존 문제 기반으로 진단되는 출력 결과을 비교함
-- ComparisonResultHolder: Summary 비교하는 데 사용되는 단순한 일반 결과 홀더
-- config.cfg: 프로젝트 Config 정보를 저장하는 파일
-- convertTool: 여러 보안 검사기의 출력을 자체 형식으로 변환하는 도구 추가 처리에 필요함, 즉 출력되는 결과의 양식을 변환
-- FlawCollector 처음에 juliet-suite 데이터를 받아서 취약점을 규칙 수집함
-- HTMLReport 결과는 html 형식으로 변화해주는 파일 
-- Issue Xml 파일 저장하기 위해서 Issue tag 클래스
-- IssueComparisionResult Issue 정보를 만든 클래스
-- IssueComparison Issue를 비교하는 클래스
-- metricGenerator metric를 생성하는 클래스
-- MSCompilerResultConverter
-- py_common 파일을 작업 등 함수
-- [main] runCompleteAnalysis main 함수 (실행 시작) 
-- ScannerCWEMapping 스캐너 결과 cwe 매핑을 캡슐화하는 단순 클래스
-- ScannerIssueHolder 전체 이슈 클래스보다 가볍움. 이슈 비교에 필요
-- SecurityModel 시코딩 모델
-- SecurityModelComparision  시코딩 모델 비교
-- SecurityScanner 다양한 종류의 보안 스캐너를 캡슐화하기 위한 간단한 클래스, 즉 config에 기준으로 정보를 추가함
+- CompareTool: Compares tool outputs against known vulnerabilities from the Juliet test suite
+- ComparisonResultHolder: Simple result holder class used for summary comparison
+- config.cfg: Configuration file for the entire project
+- convertTool: Converts outputs from different static analyzers into a unified internal format
+- FlawCollector: Collects vulnerabilities based on rules from Juliet test suite
+- HTMLReport: Generates HTML-formatted output reports
+- Issue: Represents issues in XML format using Issue tag classes
+- IssueComparisionResult: Class for managing issue information
+- IssueComparison: Class for comparing issue
+- metricGenerator: Generates evaluation metrics
+- MSCompilerResultConverter: Converts outputs
+- py_common: Utility functions
+- [main] runCompleteAnalysis: Main function to start analysis 
+- ScannerCWEMapping: Maps scanner results to CWE IDs
+- ScannerIssueHolder: Lightweight issue holder used during comparisons
+- SecurityModel: Models detected vulnerabilities
+- SecurityModelComparision: Compared detected vulnerabilities
+- SecurityScanner: Encapsulates various security scanners based on configuration
 - TransformTool
-- TestsuiteAnalyzer juliet-test-filename'에서 설정을 되는 분석 도구 run_analysis_tool
+- TestsuiteAnalyzer: Main script to configure and run analysis tools based on test filenames from the Juliet suite
 ```
 
-## 모델 실치 및 실행
-각 도두들이 실행하는 방법은 다음과 같다.
+## Setup & Execution
+Each tool is executed as follow:
 1. Infer
-- Makefile 파일을 통해서 각 보안약점 테스트 케이스 파일을 실행함
+- Use `Makefile` to build and analyze each test case
 2. Clang
-- clang.sh 파일 통해서 각 보안약점 테스트 케이스 파일을 실행함 (옵션을 추가해서 번그러워서 sh파일에서 작성함)
+- Run `clang.sh` to analyze each test case with customized options
 3. Cppcheck
-- cppcheck 명령어를 통해서 각 보안약점 테스트 케이스 파일을 실행함
+- Execute via `cppcheck` command line
 4. Flawfinder
-- cppcheck 명령어를 통해서 각 보안약점 테스트 케이스 파일을 실행함
+- Execute via `cppcheck` command line
 5. Framac
--  frama-c 명령어를 통해서 각 보안약점 테스트 케이스 파일을 실행함
+- Execute via `frama-c` command line
 6. PVS- Studio
--  pvs_studio.sh 파일을 통해서 각 보안약점 테스트 케이스 파일을 실행함
+- Use `pvs_studio.sh` to analyze each test case
 
-최종 실행 단계는 다음과 같다.
-1. 데이터 준비 (도구 실행 앞에서 실행 파일 준비 또는 빌드 필요함)
-- julietsuite 폴더에서 juliet-test-suite c/c++ 데이터 셋을 다운로드한다.
-- python3 handle_make.py 실행
+### Final Execution Steps
+1. Prepare Executables for Analysis Tools
+- Download the Juliet C/C++ dataset from the julietsuite folder
+- Run `python3 handle_make.py`
   - Infer
   - Clang
   - Cppcheck 
 
-2. Python 코드를 통해서 모든 도구를 실행함
+2. Fun Full Toolchain Analysis
 ```
 python3 TestsuiteAnalyzer.py
 ```
-- 해당 명령어를 실행하게 되면 각 도구들이 1번에 생성된 실행 파일이나 빌드 파일을 사용해서 각 테스트 케이스 파일을 보안약점을 진단한다.
-## 모델 출력
-
-## 참고
+- This command will automatically analyze each Juliet test case using all supported tools and process the output accordingly.
