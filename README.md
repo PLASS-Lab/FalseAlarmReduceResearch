@@ -13,9 +13,7 @@
 </p>
 
 This repository contains the code for the paper:
->Title: False Alarm Reduction Method for Weakness Static Analysis Using BERT Model \
->Journal: Applied Sciences \
->DOI: [10.3390/app13063502](https://doi.org/10.3390/app13063502)
+[False Alarm Reduction Method for Weakness Static Analysis Using BERT Model](https://doi.org/10.3390/app13063502)
 
 ## Project Overview
 - Static analysis tools inspect source code and generate diagnostic messages ("warnings") that indicate the location and contextual characteristics of potential security vulnerabilities. Since each static analysis tool differs in the types of vulnerabilities it can detect and its analysis performance, it is common to use multiple tools during software development. However, this approach often produces a large number of alarms, including many false positives.
@@ -83,6 +81,9 @@ This repository contains the code for the paper:
 
 ## Citation
 If you use this code for your research, please cite the following paper.
+>Title: False Alarm Reduction Method for Weakness Static Analysis Using BERT Model \
+>Journal: Applied Sciences \
+>DOI: [10.3390/app13063502](https://doi.org/10.3390/app13063502)
 ```bibtex
 @Article{nguyen2023FalseAlarmReduction,
   AUTHOR = {Nguyen, Dinh Huong and Seo, Aria and Nnamdi, Nnubia Pascal and Son, Yunsik},
